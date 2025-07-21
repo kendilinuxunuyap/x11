@@ -1,0 +1,41 @@
+**X Pencere Sistemi**
+=====================
+
+**X Pencere Sistemi, (X)**, daha çok GNU/Linux ve Unix benzeri işletim sistemlerinde kullanılan grafik arayüz altyapısıdır. Genel olarak ekrana çizdirme ve kullanıcıdan geribesleme alma işlerini yapan X sunucusunu ve uygulamaların sunucu ile haberleşme için kullanabileceği X kütüphanesini kapsar. Bu sunucu-istemci yapısı sistemin ağ üzerinden çalışmasına da olanak verir. Sunucu doğrudan donanımı yönetebildiği gibi, başka bir altyapı üzerinde de çalışabilir. Bu şekilde diğer işletim sistemlerinde de X sunucusu çalıştırılabilmektedir.
+
+1984 yılında MIT tarafından geliştirilen bu sistem, ağ üzerinden grafiksel uygulamaların çalıştırılmasını mümkün kılar.
+
+
+**İstemci-Sunucu Mimarisi**
+---------------------------
+
+**X**, istemci-sunucu mimarisiyle çalışır:
+
+- *İstemciler*, grafik uygulamaları oluşturur.
+- *Sunucu*, ekran, klavye ve fare gibi giriş/çıkış aygıtlarını kontrol eder.
+
+**Özellikler**
+--------------
+
+X Pencere Sistemi şu özellikleri sunar:
+
+- Çoklu pencere yönetimi
+- Ekran paylaşımı
+- Uzaktan erişim imkânı
+
+Örneğin, bir X istemcisi, farklı bir bilgisayarda çalışan bir X sunucusuna bağlanarak çalışabilir.
+Bu sayede kullanıcılar, başka sistemlerdeki uygulamalara kolayca erişebilirler.
+
+**X11 Protokolü**
+-----------------
+
+Sistemin temelini **X11 protokolü** oluşturur ve bu protokol, geniş bir uygulama yelpazesine destek verir.
+
+**Kaynak**
+----------
+
+`X Pencere Sistemi <https://tr.wikipedia.org/wiki/X_Pencere_Sistemi>`__
+
+.. raw:: pdf
+
+   PageBreak
