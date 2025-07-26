@@ -1,0 +1,44 @@
+.. _xf86-video-nouveau:
+**xf86-video-nouveau**
+======================
+NVIDIA grafik kartları için geliştirilmiş bir açık kaynaklı X11 video sürücüsüdür. Nouveau sürücüsü, NVIDIA'nın kapalı kaynaklı sürücülerine alternatif olarak geliştirilmiş olup, Linux ve BSD tabanlı sistemlerde NVIDIA grafik kartlarıyla uyumlu çalışır.
+
+**Paketi Derleme :**
+--------------------
+
+.. code-block:: bash
+
+	#!/usr/bin/env bash
+	name="xf86-video-nouveau"
+	version="1.0.17"
+	description="Accelerated Open Source driver for nVidia cards"
+	source="https://gitlab.freedesktop.org/xorg/driver/xf86-video-nouveau/-/archive/\
+	xf86-video-nouveau-$version/xf86-video-nouveau-xf86-video-nouveau-$version.tar.gz"
+	depends=""
+	group="x11.drivers"
+
+
+	setup(){
+
+		cp -prfv $PACKAGEDIR/files/* $SOURCEDIR
+		cd $SOURCEDIR
+		patch -Np1 < $SOURCEDIR/patches/xorg-server-21.1.diff
+		autoreconf -fvi
+		./configure --prefix=/usr \
+		    --libdir=/usr/lib64/
+	}
+
+	build(){
+		make
+	}
+
+	package(){
+		make install DESTDIR=$DESTDIR
+	}
+
+Ek dosyaları indirmek için `tıklayınız. <https://kendilinuxunuyap.github.io/_static/files/xf86-video-nouveau/files.tar>`_
+
+
+.. raw:: pdf
+
+   PageBreak

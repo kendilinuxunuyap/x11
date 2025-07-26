@@ -1,0 +1,41 @@
+.. _libdrm:
+**libdrm**
+==========
+Linux'ta kullanıcı düzeyindeki uygulamaların çekirdekteki DRM (Direct Rendering Manager) altyapısıyla iletişim kurmasını sağlayan bir ara katman kütüphanesidir. Grafik donanımına doğrudan, güvenli ve verimli erişim için kullanılır. Özellikle Mesa (OpenGL), Wayland, X.Org, ve GPU sürücüleri tarafından kullanılır.
+
+
+.. code-block:: bash
+
+	#!/usr/bin/env bash
+	name="libdrm"
+	version="2.4.120"
+	description="X.Org libdrm library"
+	source="https://dri.freedesktop.org/libdrm/libdrm-$version.tar.xz"
+	depends="libpciaccess"
+	group="x11.libs"
+
+
+	setup(){
+		cd $SOURCEDIR
+		meson setup $BUILDDIR --prefix=/usr \
+			-D default_library=both \
+			-D udev=false \
+			-D etnaviv=disabled \
+			-D freedreno=disabled \
+			-D vc4=disabled \
+			-D valgrind=disabled \
+			-D install-test-programs=true
+	}
+
+	build(){
+		ninja -C $BUILDDIR
+	}
+
+	package(){
+		DESTDIR=$DESTDIR ninja -C $BUILDDIR install
+	}
+
+
+.. raw:: pdf
+
+   PageBreak

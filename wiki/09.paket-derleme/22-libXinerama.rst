@@ -1,0 +1,34 @@
+.. _libXinerama:
+**libXinerama**
+===============
+Xinerama, birden fazla fiziksel monitörü tek bir sanal ekran gibi kullanmayı sağlayan bir X11 uzantısıdır. **libXinerama** ise bu uzantıya erişim sağlayan istemci taraflı bir kütüphanedir.
+
+**Paketi Derleme :**
+--------------------
+
+.. code-block:: bash
+
+    #!/usr/bin/env bash
+    name="libXinerama"
+    version="1.1.5"
+    description="X.Org Xinerama library"
+    source="https://www.x.org/archive/individual/lib/libXinerama-$version.tar.xz"
+    depends=""
+    group="x11.libs"
+
+    setup(){
+        $SOURCEDIR/configure --prefix=/usr \
+            --libdir=/usr/lib64/
+    }
+
+    build(){
+        make
+    }
+
+    package(){
+        make install DESTDIR=$DESTDIR
+    }
+
+.. raw:: pdf
+
+   PageBreak

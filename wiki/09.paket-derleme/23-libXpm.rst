@@ -1,0 +1,36 @@
+.. _libXpm:
+**libXpm**
+==========
+X11 pencere sistemi için **XPM (X PixMap)** formatındaki görüntü dosyalarını işlemek üzere kullanılan bir kütüphanedir.
+
+XPM, özellikle X11 uygulamalarında simge, buton ve diğer grafik öğeleri için kullanılan metin tabanlı bir bitmap görüntü formatıdır.
+
+**Paketi Derleme :**
+--------------------
+
+.. code-block:: bash
+
+    #!/usr/bin/env bash
+    name="libXpm"
+    version="3.5.14"
+    description="X.Org Xpm library"
+    source="https://www.x.org/archive/individual/lib/libXpm-$version.tar.xz"
+    depends="libX11"
+    group="x11.libs"
+
+    setup(){
+        $SOURCEDIR/configure --prefix=/usr \
+            --libdir=/usr/lib64/
+    }
+
+    build(){
+        make
+   }
+
+    package(){
+        make install DESTDIR=$DESTDIR
+    }
+
+.. raw:: pdf
+
+   PageBreak
