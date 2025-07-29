@@ -1,5 +1,6 @@
-**kly ile Paket Yapma**
------------------------
+.. _klypaketyap:
+**kly Paket Sistemiyle Paket Yapma**
+------------------------------------
 
 kly paket sistemi ile paket yapma işlemini Debian ortamında yapacağız. Debian üzerinde paket sistemimizi oluşturan scriptimiz **/bin/kly** konumunda olması gerekmektedir.
 
@@ -32,8 +33,19 @@ kly paket sistemi ile paket yapma işlemini Debian ortamında yapacağız. Debia
 		cd $DESTDIR/bin
 		ln -s bash sh
 	}
+**klybild dosyalarında Kullanılan Değişkenler**
+-----------------------------------------------
 
-**Not:** Bazı paketlerde ek dosyalar olacaktır. Bu paketlerin derleme scriplerinin altında **Ek dosya için tıklayınız** bağlantı(link) göreceksiniz. Bu bağlantıdan ek dosyalrı indirin ve paketin dizini içine sıkıştırılmış dosyayı arşivde çıkartınız. Burada örneğimiz **bash** paketi olduğu için eğer ek dosyaları olsaydı **bash** dizini içine indiğimiz dosyayı  arşivde çıkartacaktık(klybuil dosyasıyla aynı konumda olacak). 
+- **ROOTBUILDDIR:** /home/$user/distro/build → Derleme dizini
+- **BUILDDIR:** /home/$user/distro/build/build-${name}-${version} → Paket derleme dizini
+- **DESTDIR:** /home/$user/distro/rootfs → Yükleme dizini
+- **PACKAGEDIR:** $(pwd) → Derleme scriptinin bulunduğu dizin
+- **SOURCEDIR:** /home/$user/distro/build/${name}-${version} → Kaynak dizin
+
+Değişkenleri dereleme scripleri içinde kullanılmaktadır. Örneğin, kaynak dizinde işlem yapmak için sadece **$SOURCEDIR** kullanmanız yeterlidir. Bu yapılar tüm paketlerde geçerli olacak.
+
+
+**Not:** Bazı paketlerin ek dosyaları olabilir. Derleme scripti altında **Ek dosya için tıklayınız** bağlantısını(link) kullanarak ek dosyaları indirin ve paketin dizini içine çıkartınız. **bash** paketinin ek dosyaları olsaydı **bash** dizini içine indiğimiz dosyayı  arşivde çıkartacaktık. 
 
 .. raw:: pdf
 

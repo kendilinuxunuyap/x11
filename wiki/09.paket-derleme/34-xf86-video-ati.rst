@@ -16,25 +16,21 @@ AMD/ATI grafik kartları için X11 video sürücüsüdür. Bu sürücü, eski AT
 	xf86-video-ati-$version/xf86-video-ati-xf86-video-ati-$version.tar.gz"
 	depends=""
 	group="x11.drivers"
-
 	setup(){
-		cp -prfv $PACKAGEDIR/files/* $SOURCEDIR
-		cd $SOURCEDIR
-		patch -Np1 -i $SOURCEDIR/patches/xf86-video-ati-19.1.0-upstream_fixes-1.patch
-		./autogen.sh
-		./configure --prefix=/usr \
-		    --libdir=/usr/lib64/
+	cd $SOURCEDIR
+	./autogen.sh
+	./configure --prefix=/usr \
+	--libdir=/usr/lib64/
 	}
-
 	build(){
-		make
+	make
 	}
-
 	package(){
-		make install DESTDIR=$DESTDIR
+	make install DESTDIR=$DESTDIR
 	}
 	
-Ek dosyaları indirmek için `tıklayınız. <https://kendilinuxunuyap.github.io/_static/files/xf86-video-ati/files.tar>`_
+**Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_
+
 
 .. raw:: pdf
 

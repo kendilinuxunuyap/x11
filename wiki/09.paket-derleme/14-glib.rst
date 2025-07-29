@@ -3,6 +3,8 @@
 ========
 **GNOME** projesi tarafından geliştirilen, C programlama dili için temel yardımcı kütüphanedir. C programlama dilinde sıkça ihtiyaç duyulan veri yapıları, dize işlemleri, bellek yönetimi, iş parçacığı yönetimi, olay döngüsü, sinyal sistemi gibi birçok temel fonksiyonu sağlar.
 
+**Paketi Derleme :**
+--------------------
 
 .. code-block:: bash
 
@@ -38,6 +40,10 @@
 	}
 
 Ek dosyaları indirmek için `tıklayınız. <https://kendilinuxunuyap.github.io/_static/files/glib/files.tar>`_
+
+
+**Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_
+
 
 .. raw:: pdf
 

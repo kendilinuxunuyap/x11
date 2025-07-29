@@ -6,6 +6,12 @@ X11 protokolüne erişim sağlamak için geliştirilmiş, düşük seviyeli, mod
 **Paketi Derleme :**
 --------------------
 
+Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
+
+.. code-block:: bash
+	
+	sudo apt install xutils-dev doxygen xcb-proto_1.17.0 python3-xcbgen
+
 .. code-block:: bash
 
     #!/usr/bin/env bash
@@ -39,6 +45,10 @@ X11 protokolüne erişim sağlamak için geliştirilmiş, düşük seviyeli, mod
         make install DESTDIR=$DESTDIR
     }
 
+
+**Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_
+
+
 .. raw:: pdf
 
-   PageBreaklibxcb
+   PageBreak

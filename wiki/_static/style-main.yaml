@@ -11,3 +11,6 @@ fontsAlias:
   fontSansBold: DejaVuSans-Bold
   fontSansBoldItalic: DejaVuSerif-BoldItalic
   fontSansItalic: DejaVuSerif-Italic
+linkColor: [0, 0, 1]  # bağlantıları Mavi yap
+fontSize: 11
+headingFont: fontSansBold

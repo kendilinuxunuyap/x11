@@ -6,6 +6,12 @@ Sanallaştırılmış ortamlar için geliştirilen bir giriş aygıtı sürücü
 **Paketi Derleme :**
 --------------------
 
+Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
+
+.. code-block:: bash
+	
+	sudo apt install xserver-xorg-dev
+
 .. code-block:: bash
 
     #!/usr/bin/env bash
@@ -31,6 +37,10 @@ Sanallaştırılmış ortamlar için geliştirilen bir giriş aygıtı sürücü
     package(){
         make install DESTDIR=$DESTDIR
     }
+
+
+**Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_
+
 
 .. raw:: pdf
 

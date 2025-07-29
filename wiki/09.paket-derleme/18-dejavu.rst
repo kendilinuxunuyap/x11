@@ -3,6 +3,8 @@
 ==========
 Açık kaynaklı ve geniş kapsamlı bir yazı tipi ailesidir. Çok sayıda dil ve karakter setini kapsayan, özgür ve kaliteli fontlar sağlar.
 
+**Paketi Derleme :**
+--------------------
 
 .. code-block:: bash
 
@@ -33,6 +35,10 @@ Açık kaynaklı ve geniş kapsamlı bir yazı tipi ailesidir. Çok sayıda dil 
 		    cp -prfv $BUILDDIR/$font-$version/ttf ${DESTDIR}/usr/share/fonts/$font
 		done
 	}
+
+
+
+**Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_
 
 
 .. raw:: pdf

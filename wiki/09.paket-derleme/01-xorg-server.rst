@@ -16,8 +16,15 @@ Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
 
 .. code-block:: bash
 
-    sudo apt install build-essential autoconf automake libtool pkg-config libexpat1-dev python3
-
+    sudo apt install build-essential autoconf automake libtool pkg-config \
+    libexpat1-dev python3 libpixman-1-dev libxkbfile-dev libxfont-dev \
+    libxcvt-dev libxext-dev libxshmfence-dev libbsd-dev libdbus-1-dev \
+    libsystemd-dev libgbm-dev libepoxy-dev libaudit-dev xmlto fop \
+    mesa-common-dev libgl1-mesa-dev libglx-mesa0 libxcb-util-dev \
+    libxcb-shape0-dev libxcb-render0-dev libxcb-render-util0-dev \
+    libxcb-image0-dev libxcb-icccm4-dev libxcb-keysyms1-dev \
+    libxcb-randr0-dev libxcb-xkb-dev libx11-xcb-dev libxcb-xv0-dev xserver-xorg-dev
+    
 .. code-block:: bash
 
 	#!/usr/bin/env bash
@@ -34,18 +41,12 @@ Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
 		cd $SOURCEDIR
 		meson setup $BUILDDIR --prefix=/usr \
 			--libdir=/usr/lib64/ \
-			-Dipv6=true \
-			-Dxvfb=true \
-			-Dxnest=true \
-			-Dxcsecurity=true \
-			-Dxorg=true \
-			-Dxephyr=true \
-			-Dglamor=true \
-			-Dudev=true \
-			-Ddtrace=false \
-			-Dsystemd_logind=false \
-			-Dsuid_wrapper=true \
-			-Dxkb_dir=/usr/share/X11/xkb \
+			-Dipv6=true -Dxvfb=true \
+			-Dxnest=true -Dxcsecurity=true \
+			-Dxorg=true -Dxephyr=true \
+			-Dglamor=true -Dudev=true \
+			-Ddtrace=false -Dsystemd_logind=false \
+			-Dsuid_wrapper=true -Dxkb_dir=/usr/share/X11/xkb \
 			-Dxkb_output_dir=/var/lib/xkb
 		}
 
@@ -58,7 +59,7 @@ Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
 	}
 
 
-**Not:** Burada verilen derleme talimatımızı(script) ve bundan sonra gelen derleme talimatlarını  **kly Paket Yapma( kly -c paketdizini )** konusu altında anlatılan şekilde derlemeli ve **.kly** paketlerini **kly Paket Sistemi** ile kullanabilirsiniz.
+**Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_
 
 .. raw:: pdf
 

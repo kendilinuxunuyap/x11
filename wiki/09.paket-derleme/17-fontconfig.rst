@@ -3,6 +3,8 @@
 ==============
 Linux ve Unix benzeri sistemlerde kullanılan, yazı tiplerini keşfetme, yapılandırma ve yönetme işlevini sağlayan bir kütüphane ve araç setidir. Sistem üzerindeki tüm yazı tiplerini tarar, organize eder ve uygulamaların kolayca kullanabilmesi için standart bir API sunar.
 
+**Paketi Derleme :**
+--------------------
 
 .. code-block:: bash
 
@@ -37,6 +39,10 @@ Linux ve Unix benzeri sistemlerde kullanılan, yazı tiplerini keşfetme, yapıl
 		done
 
 	}
+
+
+
+**Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_
 
 
 .. raw:: pdf

@@ -21,7 +21,6 @@ Linux tabanlı sistemlerde, evdev (event device) tabanlı giriş aygıtlarını 
     depends=""
     builddepend="doxygen,meson,python3"
     group="sys.libs"
-    cd $name-$name-$version
 
     setup(){
         cd $SOURCEDIR
@@ -41,6 +40,10 @@ Linux tabanlı sistemlerde, evdev (event device) tabanlı giriş aygıtlarını 
     package(){
         DESTDIR=$DESTDIR ninja -C $BUILDDIR install
     }
+
+
+**Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_
+
 
 .. raw:: pdf
 

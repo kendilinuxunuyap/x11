@@ -3,6 +3,8 @@
 ==========
 X11 için geliştirilmiş klasik bir grafik kullanıcı arayüzü (GUI) widget kütüphanesidir. X Window System üzerinde temel GUI bileşenleri (düğmeler, listeler, menüler, metin kutuları vb.) sağlar.
 
+**Paketi Derleme :**
+--------------------
 
 .. code-block:: bash
 
@@ -27,6 +29,10 @@ X11 için geliştirilmiş klasik bir grafik kullanıcı arayüzü (GUI) widget k
 	package(){
 		make install DESTDIR=$DESTDIR
 	}
+
+
+
+**Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_
 
 
 .. raw:: pdf

@@ -10,3 +10,9 @@ a.reference.external {
     text-decoration: none; /* Alt çizgiyi kaldır */
 }
 
+a.internal.reference {
+    color: #d62728;  /* kırmızı tonu */
+    font-weight: bold;
+    text-decoration: underline;
+}
+

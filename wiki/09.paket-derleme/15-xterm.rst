@@ -3,7 +3,15 @@
 =========
 Unix ve Linux sistemlerde kullanılan klasik, sade ve hafif bir terminal emülatörüdür.
 
+**Paketi Derleme :**
+--------------------
 
+Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
+
+.. code-block:: bash
+	
+	sudo apt install  libxt-dev libxinerama-dev libxaw7-dev
+	
 .. code-block:: bash
 
 
@@ -55,6 +63,10 @@ Unix ve Linux sistemlerde kullanılan klasik, sade ve hafif bir terminal emülat
 	}
 	
 Ek dosyaları indirmek için `tıklayınız. <https://kendilinuxunuyap.github.io/_static/files/xterm/files.tar>`_
+
+
+**Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_
+
 
 .. raw:: pdf
 

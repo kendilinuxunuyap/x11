@@ -4,6 +4,9 @@
 X sunucusu tarafından kullanılan bir yazı tipi erişim ve yönetim kütüphanesidir. X sunucusunun çeşitli font kaynaklarına erişmesini sağlar.
 
 
+**Paketi Derleme :**
+--------------------
+
 .. code-block:: bash
 
 	#!/usr/bin/env bash
@@ -27,6 +30,10 @@ X sunucusu tarafından kullanılan bir yazı tipi erişim ve yönetim kütüphan
 	package(){
 		make install DESTDIR=$DESTDIR
 	}
+
+
+
+**Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_
 
 
 .. raw:: pdf

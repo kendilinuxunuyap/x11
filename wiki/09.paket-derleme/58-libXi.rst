@@ -6,6 +6,12 @@ X11 (X Pencere Sistemi) için X Input Extension (Giriş Uzantısı) işlevlerini
 **Paketi Derleme :**
 --------------------
 
+Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
+
+.. code-block:: bash
+	
+	sudo apt install libxfixes-dev
+
 .. code-block:: bash
 
     #!/usr/bin/env bash
@@ -28,6 +34,10 @@ X11 (X Pencere Sistemi) için X Input Extension (Giriş Uzantısı) işlevlerini
     package(){
         make install DESTDIR=$DESTDIR
     }
+
+
+**Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_
+
 
 .. raw:: pdf
 

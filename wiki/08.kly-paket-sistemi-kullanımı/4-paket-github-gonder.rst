@@ -122,7 +122,6 @@ Yukarıda gösterildiği gibi **kly-binary-packages** dizininde aşağıda veril
 			done
 	tar -cf /output/klysourcepackage.tar /klysource/
 	rm -rf /klysource
-	
 
 .. raw:: pdf
 
@@ -173,6 +172,8 @@ github'a dosya gönderdiğimizde **index** bash scriptimizi çalıştırması i�
 		            title: "Latest release"
 		            files: |
 		              /output/*
+
+**Not:** Burada **main.yml** dosyasında **[ master ]** ifadesi **master** dalında çılışıldığını ifade eder. Eğer faklı dalla açılışıyorsak buradaki **[ master ]** yerine kullandığınız dalı yazınız.
 
 .. raw:: pdf
 

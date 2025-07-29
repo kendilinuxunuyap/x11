@@ -3,6 +3,14 @@
 ============
 Metin şekillendirme (text shaping) motorudur. Yazı tipi karakterlerinin, dilin ve yazım kurallarının özelliklerine göre doğru ve estetik şekilde yerleşimini sağlar.
 
+**Paketi Derleme :**
+--------------------
+
+Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
+
+.. code-block:: bash
+	
+	sudo apt install libcairo2-dev gtk-doc-tools
 
 .. code-block:: bash
 
@@ -36,6 +44,10 @@ Metin şekillendirme (text shaping) motorudur. Yazı tipi karakterlerinin, dilin
 	package(){
 		DESTDIR=$DESTDIR ninja -C $BUILDDIR install
 	}
+
+
+**Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_
+
 
 
 .. raw:: pdf

@@ -25,7 +25,6 @@ Genellikle grafik arayüzü olmayan sistemlerde veya özel oturumlarda kullanıl
 
 
 	setup(){
-		cp -prfv ${dizin}/${paket}/files /tmp/bps/build/files/
 		cp -prfv $PACKAGEDIR/files $SOURCEDIR
 		cd $SOURCEDIR
 		
@@ -57,6 +56,10 @@ Genellikle grafik arayüzü olmayan sistemlerde veya özel oturumlarda kullanıl
 	}
 
 Ek dosyaları indirmek için `tıklayınız. <https://kendilinuxunuyap.github.io/_static/files/xinit/files.tar>`_
+
+
+**Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_
+
 
 .. raw:: pdf
 

@@ -5,10 +5,7 @@
 
 html_theme = 'alabaster'
 
-html_static_path = ['_static']
-html_css_files = [
-    'custom.css',
-]
+
 
 project = 'distro Wiki'
 copyright = 'distro 2023'
@@ -49,39 +46,37 @@ html_theme_options = {
     'logo': 'logo.svg',
 
 }
+html_css_files = [
+    'custom.css',
+]
 html_sidebars = {
     '**': [
         'about.html',
         'navigation.html',
     ]
 }
+
 latex_elements = {
-    # Kod blokları için daha dar genişlik ya da farklı font boyutu ayarlayabilirsin
     'preamble': r'''
+\usepackage{xcolor}
 \usepackage{tcolorbox}
 \tcbset{listing engine=listings}
-% Kod kutusunun genişliğini ve yüksekliğini ayarlayabiliriz
+
 \newtcblisting{mybashlisting}{
     listing only,
     listing options={language=bash, basicstyle=\ttfamily\small},
     colback=gray!5,
     colframe=gray!90,
-    width=0.9\textwidth, % genişliği %80 yapar
-    height=0.3\textheight, % yüksekliği %30 yapar
+    width=0.9\textwidth,
+    height=0.3\textheight,
     floatplacement=h!,
 }
-''',
-}
 
-latex_elements = {
-    'preamble': r'''
-\usepackage{xcolor}      % Renk desteği
-\usepackage{hyperref}    % Linkler için
 \hypersetup{
-    colorlinks=true,     % Linkler renkli olsun
-    linkcolor=blue,      % :ref: bağlantıları (iç linkler) mavi
-    urlcolor=black,      % dış bağlantılar (http) siyah
-    citecolor=black      % alıntılar siyah
+    colorlinks=true,
+    linkcolor=red,   % <== :ref: bağlantı rengi (değiştirebilirsin)
+    urlcolor=black,
+    citecolor=black
 }
 ''',
 }

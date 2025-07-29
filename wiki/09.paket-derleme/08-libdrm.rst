@@ -3,6 +3,8 @@
 ==========
 Linux'ta kullanıcı düzeyindeki uygulamaların çekirdekteki DRM (Direct Rendering Manager) altyapısıyla iletişim kurmasını sağlayan bir ara katman kütüphanesidir. Grafik donanımına doğrudan, güvenli ve verimli erişim için kullanılır. Özellikle Mesa (OpenGL), Wayland, X.Org, ve GPU sürücüleri tarafından kullanılır.
 
+**Paketi Derleme :**
+--------------------
 
 .. code-block:: bash
 
@@ -34,6 +36,10 @@ Linux'ta kullanıcı düzeyindeki uygulamaların çekirdekteki DRM (Direct Rende
 	package(){
 		DESTDIR=$DESTDIR ninja -C $BUILDDIR install
 	}
+
+
+
+**Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_
 
 
 .. raw:: pdf
