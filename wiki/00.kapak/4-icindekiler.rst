@@ -13,17 +13,17 @@
    * - 6- :ref:`paketderleme`
      - 33
    * - 7- :ref:`isohazirlama`
-     - 105
+     - 106
    * - 8- :ref:`sistemkurulumu`
-     - 107
+     - 108
    * - 5- :ref:`xpenceresistemi`
-     - 111
+     - 112
    * - 9- :ref:`yardimcikonular`
-     - 113
+     - 114
    * - 10- :ref:`kaynaklar`
-     - 147
-   * - 11- :ref:`gelistiricimesaji`
      - 148
+   * - 11- :ref:`gelistiricimesaji`
+     - 149
  
 .. raw:: pdf
 
