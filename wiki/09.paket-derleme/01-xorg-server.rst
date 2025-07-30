@@ -1,4 +1,5 @@
 .. _xorg-server:
+
 **xorg-server**
 ===============
 
@@ -19,11 +20,14 @@ Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
     sudo apt install build-essential autoconf automake libtool pkg-config \
     libexpat1-dev python3 libpixman-1-dev libxkbfile-dev libxfont-dev \
     libxcvt-dev libxext-dev libxshmfence-dev libbsd-dev libdbus-1-dev \
-    libsystemd-dev libgbm-dev libepoxy-dev libaudit-dev xmlto fop \
+    libgbm-dev libepoxy-dev libaudit-dev xmlto fop \
     mesa-common-dev libgl1-mesa-dev libglx-mesa0 libxcb-util-dev \
     libxcb-shape0-dev libxcb-render0-dev libxcb-render-util0-dev \
-    libxcb-image0-dev libxcb-icccm4-dev libxcb-keysyms1-dev \
-    libxcb-randr0-dev libxcb-xkb-dev libx11-xcb-dev libxcb-xv0-dev xserver-xorg-dev
+    libxcb-image0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-randr0-dev \ 
+    libxcb-xkb-dev libx11-xcb-dev libxcb-xv0-dev xserver-xorg-dev libxcb-input-dev \
+    libxcb-damage0-dev libxcb-sync-dev libunwind-dev libudev-dev libselinux1-dev xutils-dev
+	
+	# xutils-dev (xorg-macros)
     
 .. code-block:: bash
 
@@ -33,7 +37,7 @@ Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
 	description="X.Org X servers"
 	source="https://www.x.org/releases/individual/xserver/xorg-server-$version.tar.xz"
 	depends="libmd,libbsd,libepoxy,libglvnd,libunwind,libfontenc,libxkbfile,xauth, \
-	xkbcomp,setxkbmap,\ freetype,libXfont2,libxcvt,mesa,libX11,libdrm,pixman, \ 
+	xkbcomp,setxkbmap,freetype,libXfont2,libxcvt,mesa,libX11,libdrm,pixman, \ 
 	font-util,xcb-util-renderutil,xcb-util, xcb-util-image,xcb-util-wm,xcb-util-keysyms"
 	group="x11.base"
 

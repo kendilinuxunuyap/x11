@@ -1,6 +1,7 @@
 .. _temelkavramlar:
-Temel Kavramlar
-================
+
+**Temel Kavramlar**
+===================
 .. toctree::
 	:glob:
 

@@ -1,7 +1,11 @@
 .. _libXft:
 **libXft**
 ==========
+
 X11 grafik sisteminde FreeType yazı tipi motorunu kullanarak daha güzel, pürüzsüz (antialiased) metinler göstermek için kullanılan bir kütüphanedir.
+
+**Paketi Derleme :**
+--------------------
 
 .. code-block:: bash
 

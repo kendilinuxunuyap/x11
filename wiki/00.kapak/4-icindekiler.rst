@@ -4,26 +4,26 @@
 .. list-table::
    :widths: 60 10
 
-   * - 1- :ref:`giris`
+   * - 1- :ref:`temelkavramlar`
      - 5
-   * - 3- :ref:`temelsistem`
-     - 6
-   * - 4- :ref:`paketderleme`
-     - 9
-   * - 6- :ref:`isohazirlama`
-     - 94
-   * - 7- :ref:`sistemkurulumu`
-     - 101
-   * - 8- :ref:`sistemcalistirma-inceleme`
-     - 104
-   * - 5- :ref:`paketsistemi`
-     - 109
+   * - 3- :ref:`sistemhazirlanmasi`
+     - 8
+   * - 4- :ref:`klypaketsistemikullanimi`
+     - 17
+   * - 6- :ref:`paketderleme`
+     - 33
+   * - 7- :ref:`isohazirlama`
+     - 105
+   * - 8- :ref:`sistemkurulumu`
+     - 107
+   * - 5- :ref:`xpenceresistemi`
+     - 111
    * - 9- :ref:`yardimcikonular`
-     - 120
+     - 113
    * - 10- :ref:`kaynaklar`
-     - 140
+     - 147
    * - 11- :ref:`gelistiricimesaji`
-     - 141
+     - 148
  
 .. raw:: pdf
 

@@ -1,6 +1,8 @@
 .. _xcalc:
+
 **xcalc**
 =========
+
 X11 (X Pencere Sistemi) üzerinde çalışan basit bir grafiksel hesap makinesi uygulamasıdır.
 
 **Paketi Derleme :**
@@ -10,7 +12,8 @@ Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
 
 .. code-block:: bash
 	
-	sudo apt install libxaw7-dev libxt-dev
+	sudo apt install libxaw7-dev libxt-dev  libsm-dev \
+	libxau-dev libxext-dev libxi-dev libxmu-dev libxt-dev
 
 .. code-block:: bash
 
