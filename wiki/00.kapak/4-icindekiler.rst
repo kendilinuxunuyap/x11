@@ -6,23 +6,23 @@
 
    * - 1- :ref:`temelkavramlar`
      - 5
-   * - 3- :ref:`sistemhazirlanmasi`
+   * - 2- :ref:`sistemhazirlanmasi`
      - 8
-   * - 4- :ref:`klypaketsistemikullanimi`
+   * - 3- :ref:`klypaketsistemikullanimi`
      - 17
-   * - 6- :ref:`paketderleme`
+   * - 4- :ref:`paketderleme`
      - 33
-   * - 7- :ref:`isohazirlama`
+   * - 5- :ref:`isohazirlama`
      - 106
-   * - 8- :ref:`sistemkurulumu`
+   * - 6- :ref:`sistemcalistirma-inceleme`
      - 108
-   * - 5- :ref:`xpenceresistemi`
-     - 112
-   * - 9- :ref:`yardimcikonular`
-     - 114
-   * - 10- :ref:`kaynaklar`
+   * - 7- :ref:`xpenceresistemi`
+     - 115
+   * - 8- :ref:`yardimcikonular`
+     - 117
+   * - 9- :ref:`kaynaklar`
      - 148
-   * - 11- :ref:`gelistiricimesaji`
+   * - 10- :ref:`gelistiricimesaji`
      - 149
  
 .. raw:: pdf

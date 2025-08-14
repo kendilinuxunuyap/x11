@@ -1,6 +1,6 @@
-Bir önceki kitabımızda Temel Linux sistemini oluşturmayı ve iso halinde kurulumu anlatmıştık.
+Bir önceki kitabımızda **Temel Linux Sistemini** oluşturmayı ve iso halinde kurulumu anlatmıştık.
 Şimdi ise bu temel sistemi kurarak bu sistem üzerine **xorg** derleyerek **x11** pencere sisteminin
-nasıl çalışacağı analatılacaktır. 
+nasıl çalışacağı analatılacaktır. **Temel Linux Sistem** https://github.com/kendilinuxunuyap/kly-base-distro/releases/download/current/kly-base-distro.iso adresinde bulunmaktadır. İso indirip kurulum yapabilirsiniz.
 
 **Temel Sistem Kurulumu**
 -------------------------
