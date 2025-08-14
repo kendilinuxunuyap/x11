@@ -10,7 +10,7 @@ Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
 
 .. code-block:: bash
 	
-	sudo apt install libcairo2-dev gtk-doc-tools
+	sudo apt install libcairo2-dev gtk-doc-tools libgirepository1.0-dev libchafa-dev
 
 .. code-block:: bash
 
@@ -21,9 +21,7 @@ Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
 	source="https://github.com/harfbuzz/harfbuzz/archive/refs/tags/$version.tar.gz"
 	depends="cairo,glib"
 	group="media.libs"
-	#libgirepository1.0-dev
-	#libcairo2-dev
-	#libchafa-dev
+	
 	setup(){
 		cd $SOURCEDIR
 		meson setup $BUILDDIR --prefix=/usr \

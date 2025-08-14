@@ -27,26 +27,12 @@ Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
 	setup(){
 		cp -prfv $PACKAGEDIR/files/* $SOURCEDIR
 
-		$SOURCEDIR/configure --prefix=/usr \
-		    --libdir=/usr/lib64/ \
-			--exec-prefix=/usr \
-			--with-app-defaults=/etc/X11/app-defaults \
-			--with-icondir=/usr/share/icons \
-			--with-icon-theme=yes \
-			--with-tty-group=tty \
-			--enable-warnings \
-			--enable-logging \
-			--enable-wide-chars \
-			--enable-luit \
-			--enable-256-color \
-			--disable-imake \
-			--enable-narrowproto \
-			--enable-exec-xterm \
-			--enable-dabbrev \
-			--enable-backarrow-is-erase \
-			--enable-sixel-graphics \
-			--with-utempter \
-			--with-desktop-category=System,TerminalEmulator
+		$SOURCEDIR/configure --prefix=/usr --libdir=/usr/lib64/ --exec-prefix=/usr \
+			--with-app-defaults=/etc/X11/app-defaults --with-icondir=/usr/share/icons \
+			--with-icon-theme=yes --with-tty-group=tty --enable-warnings --enable-logging \
+			--enable-wide-chars --enable-luit --enable-256-color --disable-imake \
+			--enable-narrowproto --enable-exec-xterm --enable-dabbrev --enable-backarrow-is-erase \
+			--enable-sixel-graphics --with-utempter --with-desktop-category=System,TerminalEmulator
 	}
 
 	build(){

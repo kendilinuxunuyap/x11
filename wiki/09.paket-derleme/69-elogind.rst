@@ -4,11 +4,10 @@
 Linux’ta oturum (session) yönetimi sağlayan, systemd-logind’in bağımsız bir sürümüdür. Özellikle systemd kullanmayan sistemler için  geliştirilmiştir. Temel işlemleri şunlardır;
 
 1. Kullanıcı oturumlarını izler ve yönetir.
-2. Güç olaylarını (suspend, hibernate) destekler.
-3. Donanım erişim izinlerini kontrol eder (ses, kamera vb.).
-4. D-Bus üzerinden masaüstü ortamlarıyla iletişim kurar.
-5. PAM ile kimlik doğrulamayı destekler.
-6. Daemon olarak çalışır ve sistemle D-Bus üzerinden iletişim kurar.
+2. Donanım erişim izinlerini kontrol eder (ses, kamera vb.).
+3. D-Bus üzerinden masaüstü ortamlarıyla iletişim kurar.
+4. PAM ile kimlik doğrulamayı destekler.
+
 
 **Paketi Derleme :**
 --------------------
@@ -69,6 +68,10 @@ Linux’ta oturum (session) yönetimi sağlayan, systemd-logind’in bağımsız
         ln -s ../../../lib64/pkgconfig/libelogind.pc libelogind.pc 
     }
 
+	
+Ek dosyaları indirmek için `tıklayınız. <https://kendilinuxunuyap.github.io/_static/files/elogind/files.tar>`_
+
+**Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_
 
 .. raw:: pdf
 

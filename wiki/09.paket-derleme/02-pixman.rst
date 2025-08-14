@@ -6,12 +6,6 @@ Pixman, grafik işlemleri için kullanılan düşük seviyeli bir kütüphanedir
 **Paketi Derleme :**
 --------------------
 
-Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
-
-.. code-block:: bash
-
-    sudo apt install build-essential autoconf automake libtool pkg-config libexpat1-dev python3
-
 .. code-block:: bash
 
 	#!/usr/bin/env bash

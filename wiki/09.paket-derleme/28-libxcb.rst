@@ -37,7 +37,6 @@ Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
     }
 
     build(){
-    	#sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
         make
     }
 
