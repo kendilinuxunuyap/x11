@@ -38,16 +38,13 @@ D-Bus, Linux ve diğer Unix benzeri sistemlerde kullanılan bir mesajlaşma sist
     package(){
         make install DESTDIR=$DESTDIR
         mkdir -p "$DESTDIR"/etc/init.d "$DESTDIR"/etc/local.d "$DESTDIR"/etc/X11/xinit/xinitrc.d/
-        install ../files/dbus.initd "$DESTDIR"/etc/init.d/dbus
-        install ../files/dbus.xinit "$DESTDIR"/etc/X11/xinit/xinitrc.d/30-dbus-launch.sh
-        install ../files/xrunsystemd.init.d ${DESTDIR}/etc/init.d/xrunsystemd
-        install ../files/runsystemd.local.d ${DESTDIR}/etc/local.d/runsystemd
+        install $SOURCEDIR/files/dbus.initd "$DESTDIR"/etc/init.d/dbus
+        install $SOURCEDIR/files/dbus.xinit "$DESTDIR"/etc/X11/xinit/xinitrc.d/30-dbus-launch.sh
         
-         for level in boot default nonetwork shutdown sysinit ; do
+        for level in boot default nonetwork shutdown sysinit ; do
         mkdir -p ${DESTDIR}/etc/runlevels/$level
         done
         cd ${DESTDIR}/etc/runlevels/default
-        ln -s ../../init.d/xrunsystemd xrunsystemd
         ln -s ../../init.d/dbus dbus
     }
 

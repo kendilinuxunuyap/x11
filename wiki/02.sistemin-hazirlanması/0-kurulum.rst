@@ -50,6 +50,8 @@ Sisteme **root** kullanıcısı olarak giriş yapıldığı görülmektedir.
 
 .. image:: /_static/images/kly-acilis2.png
   :width: 600
+  
+**Temel Linux Sistemi** görüldüğü üzere çalışmaktadır. Artık **x Pencere Sistemi** paketlerini ve bağımlılıklarını **kly Paket Sistemini** kullanarak derlenecek ve **Temel Linux Sistemi** üzerine kurularak **x Pencere Sistemi** ortamımızı çalışır hale getireceğiz.
 
 .. raw:: pdf
 
