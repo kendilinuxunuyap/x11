@@ -6,7 +6,7 @@ Açık kaynaklı bir yazı tipi motorudur. Çeşitli yazı tipi dosyalarını ç
 **Paketi Derleme :**
 --------------------
 
-Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
+Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olması gerekir.
 
 .. code-block:: bash
 	

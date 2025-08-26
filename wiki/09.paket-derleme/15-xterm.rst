@@ -6,7 +6,7 @@ Unix ve Linux sistemlerde kullanılan klasik, sade ve hafif bir terminal emülat
 **Paketi Derleme :**
 --------------------
 
-Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
+Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olması gerekir.
 
 .. code-block:: bash
 	

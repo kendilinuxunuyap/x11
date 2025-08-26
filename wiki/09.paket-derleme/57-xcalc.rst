@@ -8,7 +8,7 @@ X11 (X Pencere Sistemi) üzerinde çalışan basit bir grafiksel hesap makinesi 
 **Paketi Derleme :**
 --------------------
 
-Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
+Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olması gerekir.
 
 .. code-block:: bash
 	

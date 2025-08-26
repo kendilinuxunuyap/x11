@@ -6,7 +6,7 @@ X11 pencere sisteminde oturum yönetimi (session management) işlevlerini sağla
 **Paketi Derleme :**
 --------------------
 
-Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
+Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olması gerekir.
 
 .. code-block:: bash
 	

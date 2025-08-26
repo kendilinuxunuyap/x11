@@ -13,7 +13,7 @@ Bir uygulama, X protokolü üzerinden bir pencere açmak istediğinde, bu pencer
 **Paketi Derleme :**
 --------------------
 
-Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
+Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olması gerekir.
 
 .. code-block:: bash
 

@@ -10,7 +10,7 @@ X11 için geliştirilmiş, hafif, esnek ve yüksek derecede özelleştirilebilir
 **Paketi Derleme :**
 --------------------
 
-Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
+Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olması gerekir.
 
 .. code-block:: bash
 	

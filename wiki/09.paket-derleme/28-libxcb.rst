@@ -6,7 +6,7 @@ X11 protokolüne erişim sağlamak için geliştirilmiş, düşük seviyeli, mod
 **Paketi Derleme :**
 --------------------
 
-Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
+Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olması gerekir.
 
 .. code-block:: bash
 	

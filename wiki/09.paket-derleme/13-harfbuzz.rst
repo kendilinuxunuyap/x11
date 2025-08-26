@@ -6,7 +6,7 @@ Metin şekillendirme (text shaping) motorudur. Yazı tipi karakterlerinin, dilin
 **Paketi Derleme :**
 --------------------
 
-Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
+Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olması gerekir.
 
 .. code-block:: bash
 	

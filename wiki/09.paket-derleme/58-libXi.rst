@@ -6,7 +6,7 @@ X11 (X Pencere Sistemi) için X Input Extension (Giriş Uzantısı) işlevlerini
 **Paketi Derleme :**
 --------------------
 
-Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
+Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olması gerekir.
 
 .. code-block:: bash
 	

@@ -6,7 +6,7 @@ Sanallaştırılmış ortamlar için geliştirilen bir giriş aygıtı sürücü
 **Paketi Derleme :**
 --------------------
 
-Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olası gerekir.
+Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olması gerekir.
 
 .. code-block:: bash
 	
