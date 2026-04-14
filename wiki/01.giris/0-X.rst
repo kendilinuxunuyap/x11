@@ -1,40 +1,58 @@
-**X Pencere Sistemi**
-=====================
+X Pencere Sistemi
+=================
 
-**X Pencere Sistemi, (X)**, daha çok GNU/Linux ve Unix benzeri işletim sistemlerinde kullanılan grafik arayüz altyapısıdır. Genel olarak ekrana çizdirme ve kullanıcıdan geribesleme alma işlerini yapan X sunucusunu ve uygulamaların sunucu ile haberleşme için kullanabileceği X kütüphanesini kapsar. Bu sunucu-istemci yapısı sistemin ağ üzerinden çalışmasına da olanak verir. Sunucu doğrudan donanımı yönetebildiği gibi, başka bir altyapı üzerinde de çalışabilir. Bu şekilde diğer işletim sistemlerinde de X sunucusu çalıştırılabilmektedir.
+**X Pencere Sistemi (X)**, GNU/Linux ve Unix sistemlerde kullanılan grafik arayüz altyapısıdır.  
+Bir uygulama değil, kurallar bütünüdür.  
 
-1984 yılında MIT tarafından geliştirilen bu sistem, ağ üzerinden grafiksel uygulamaların çalıştırılmasını mümkün kılar.
+Pencerelerin nasıl çizileceğini ve klavye/fare gibi donanımlarla nasıl iletişim kurulacağını tanımlar.  
+X sunucusu (Xorg) ile X istemcileri (xcalc, xeyes vb.) arasındaki iletişimi sağlar.
+
+**X Pencere Sistemi Bileşenleri**
++++++++++++++++++++++++++++++++++
+
+**1- X Sunucusu (Xorg)**
+------------------------
+
+X Pencere Sistemi'nin en önemli bileşeni X sunucusudur (**Xorg**). X server, X sunucusu veya X11 server olarak da adlandırılır.  
+
+Ekran, klavye ve fare ile uygulamalar arasında aracı görevi görür. Pencereleri oluşturur ve grafik çıktıyı sağlar.  
+
+Xorg, bir **görüntü sunucusudur (display server)**. Masaüstü ortamlarını çalıştırır ancak kendisi bir masaüstü ortamı değildir.  
+
+**2- X İstemcileri (Uygulamalar)**
+----------------------------------
+
+X sunucusuna bağlanan programlardır(xterm, xcalc, xeyes).
+
+**3- Pencere Yöneticisi (Window Manager)**
+------------------------------------------
+
+Xorg yalnızca pencereyi oluşturur. Pencereyi taşıma, kapatma, büyütme ve küçültme işlemlerini yapar. Basit ortam sunan pencere yöneicileri( Openbox, i3).
+
+Xorg + Openbox => Grafik ortamda çalışan bir sistem oluşturur.
 
 
-**İstemci-Sunucu Mimarisi**
----------------------------
+**4- Giriş Ekranı + Oturum Başlatıcı (Display Manager)**
+--------------------------------------------------------
 
-**X**, istemci-sunucu mimarisiyle çalışır:
+Sistem açıldığında kullanıcı seçimi ve parola ekranı sunar. Girişten sonra kullanıcı oturumunu (masaüstü yöneticisini) başlatır.  
 
-- *İstemciler*, grafik uygulamaları oluşturur.
-- *Sunucu*, ekran, klavye ve fare gibi giriş/çıkış aygıtlarını kontrol eder.
+Tercih edilen giriş ekranı yöneticileri(gdm, lightdm, lxdm). X Pencere Sistemi için zorunlu değildir.
 
-**Özellikler**
---------------
 
-X Pencere Sistemi şu özellikleri sunar:
+**5- Masaüstü Yöneticisi (Desktop Manager)**
+--------------------------------------------
 
-- Çoklu pencere yönetimi
-- Ekran paylaşımı
-- Uzaktan erişim imkânı
+Masaüstü ortamını sağlayan uygulamalar bütünüdür. Dosya yöneticisi, pencere yöneticisi, ayarlar ve panel gibi bileşenleri içerir.  
 
-Örneğin, bir X istemcisi, farklı bir bilgisayarda çalışan bir X sunucusuna bağlanarak çalışabilir.
-Bu sayede kullanıcılar, başka sistemlerdeki uygulamalara kolayca erişebilirler.
+Tercih edilen masaüstü yöneticisi(Cinnamon, LXDE, XFCE, KDE, GNOME). X Pencere Sistemi için zorunlu değildir.
 
-**X11 Protokolü**
------------------
+|
+|
 
-Sistemin temelini **X11 protokolü** oluşturur ve bu protokol, geniş bir uygulama yelpazesine destek verir.
 
-**Kaynak**
-----------
+Bu dokümanda, **Xorg + Openbox** ortamında xcalc, xeyes ve xterm çalıştırılabilen bir sistemin kurulumu anlatılacaktır.
 
-`X Pencere Sistemi <https://tr.wikipedia.org/wiki/X_Pencere_Sistemi>`__
 
 .. raw:: pdf
 
