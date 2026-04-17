@@ -1,7 +1,7 @@
 .. _xf86-video-siliconmotion:
 **xf86-video-siliconmotion**
 ============================
-**Silicon Motion** grafik kartları için geliştirilmiş bir X11 video sürücüsüdür. Silicon Motion, genellikle gömülü sistemler, taşınabilir cihazlar ve eski bilgisayarlar için grafik çözümleri üreten bir üreticidir. Silicon Motion'un SM720, SM740, SM750 gibi eski grafik kartlarıyla uyumlu çalışır.
+**Silicon Motion** grafik kartları için video sürücüsüdür.
 
 **Paketi Derleme :**
 --------------------

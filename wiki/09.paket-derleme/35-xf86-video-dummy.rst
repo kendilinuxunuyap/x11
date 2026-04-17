@@ -1,7 +1,7 @@
 .. _xf86-video-dummy:
 **xf86-video-dummy**
 ====================
-X11 için sanal (dummy) bir video sürücüsüdür. Bu sürücü, herhangi bir gerçek grafik donanımı kullanmayan, yalnızca yazılım temelli ortamlar veya test amaçları için tasarlanmıştır.
+Dummy video sürücüsüdür.
 
 **Paketi Derleme :**
 --------------------

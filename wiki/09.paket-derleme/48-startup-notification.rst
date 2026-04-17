@@ -1,7 +1,7 @@
 .. _startup-notification:
 **startup-notification**
 ========================
-Bir uygulamanın başlatılma süreci sırasında kullanıcıya görüntülü bildirimde bulunma amacıyla kullanılan bir X11 uzantısıdır. Bu uzantı, uygulama başlatıldığında, özellikle yavaş başlatan uygulamalarda kullanıcıyı bilgilendirir ve etkileşimli bir geri bildirim sağlar.
+Bilgilendirme(uygulama mesajları) için kullanılan bir pakettir.
 
 **Paketi Derleme :**
 --------------------

@@ -1,7 +1,7 @@
 .. _xf86-video-nouveau:
 **xf86-video-nouveau**
 ======================
-NVIDIA grafik kartları için geliştirilmiş bir açık kaynaklı X11 video sürücüsüdür. Nouveau sürücüsü, NVIDIA'nın kapalı kaynaklı sürücülerine alternatif olarak geliştirilmiş olup, Linux ve BSD tabanlı sistemlerde NVIDIA grafik kartlarıyla uyumlu çalışır.
+NVIDIA grafik kartları için video sürücüsüdür.
 
 **Paketi Derleme :**
 --------------------

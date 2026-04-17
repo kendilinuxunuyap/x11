@@ -1,7 +1,7 @@
 .. _xf86-video-ast:
 **xf86-video-ast**
 ==================
-**AST (Advanced Systems Technology)** grafik kartları için geliştirilmiş bir X11 video sürücüsüdür. AST kartları genellikle gömülü sistemler, iş istasyonları ve sunucu uygulamaları gibi alanlarda kullanılır.
+**AST (Advanced Systems Technology)** grafik kartları için video sürücüsüdür.
 
 **Paketi Derleme :**
 --------------------

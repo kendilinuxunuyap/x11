@@ -1,7 +1,7 @@
 .. _xf86-video-vmware:
 **xf86-video-vmware**
 =====================
-VMware sanal makineleri için geliştirilmiş bir X11 video sürücüsüdür. VMware sanal makinelerinde çalışan Linux ve BSD sistemlerine grafik hızlandırması ve sanal ekran yönetimi sağlar.
+VMware sanal makineleri için video sürücüsüdür.
 
 **Paketi Derleme :**
 --------------------

@@ -1,8 +1,7 @@
 .. _harfbuzz:
 **harfbuzz**
 ============
-Metin şekillendirme (text shaping) motorudur. Yazı tipi karakterlerinin, dilin ve yazım kurallarının özelliklerine göre doğru ve estetik şekilde yerleşimini sağlar.
-
+Metin şekillendirme (text shaping) kütüphanesi. 
 **Paketi Derleme :**
 --------------------
 

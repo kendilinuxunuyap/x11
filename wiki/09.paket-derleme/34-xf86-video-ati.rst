@@ -1,7 +1,7 @@
 .. _xf86-video-ati:
 **xf86-video-ati**
 ==================
-AMD/ATI grafik kartları için X11 video sürücüsüdür. Bu sürücü, eski ATI Radeon grafik kartları için temel 2D grafik hızlandırması sağlar ve X.Org Server'da çalışır.
+AMD/ATI grafik kartları için video sürücüsüdür.
 
 **Paketi Derleme :**
 --------------------

@@ -1,11 +1,7 @@
 .. _openbox:
 **openbox**
 ===========
-X11 için geliştirilmiş, hafif, esnek ve yüksek derecede özelleştirilebilir bir pencere yöneticisidir.
-
-- openbox, yalnızca pencere yönetiminden sorumludur, yani masaüstü ortamı (desktop environment) değildir.
-- Uygulamalar arasında pencere geçişi, konumlandırma, boyutlandırma ve dekorasyon işlevlerini sağlar.
-- Özellikle düşük sistem kaynaklı bilgisayarlarda tercih edilir.
+X11 için bir pencere yöneticisidir.
 
 **Paketi Derleme :**
 --------------------

@@ -2,7 +2,7 @@
 **libXft**
 ==========
 
-X11 grafik sisteminde FreeType yazı tipi motorunu kullanarak daha güzel, pürüzsüz (antialiased) metinler göstermek için kullanılan bir kütüphanedir.
+Yazı tipi motorunu kullannan bir kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

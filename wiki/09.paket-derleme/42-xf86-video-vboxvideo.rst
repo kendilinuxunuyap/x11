@@ -1,7 +1,7 @@
 .. _xf86-video-vboxvideo:
 **xf86-video-vboxvideo**
 ========================
-**VirtualBox** sanal makinesi için geliştirilmiş bir X11 video sürücüsüdür. VirtualBox üzerinde çalışan sanal makinelerde grafik hızlandırma sağlar ve sanal ekran çıkışı sunar.
+**VirtualBox** sanal makinesi video sürücüsüdür.
 
 **Paketi Derleme :**
 --------------------

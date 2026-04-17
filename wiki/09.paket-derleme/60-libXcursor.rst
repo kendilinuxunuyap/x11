@@ -1,7 +1,7 @@
 .. _libXcursor:
 **libXcursor**
 ==============
-X11 (X Pencere Sistemi) için fare imleci (cursor) yönetimini geliştiren bir kütüphanedir. Özellikle şeffaflık, ölçeklenebilirlik ve tema desteği gibi modern özellikleri sağlayarak klasik X imleç sistemini geliştirir.
+Fare imleci (cursor) yönetimini geliştiren bir kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

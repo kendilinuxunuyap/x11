@@ -1,11 +1,8 @@
 .. _libX11:
 **libX11**
 ==========
-X11 pencere sistemi ile çalışan grafik uygulamaların X sunucusuyla iletişim kurmasını sağlayan temel istemci kütüphanesidir.
+X11 pencere sistemi için temel kütüphanedir.
 
-- X protokolünü kullanan uygulamalar ile X sunucusu arasında bağlantı kurar.
-- X sunucusuna pencere oluşturma, olay alma (fare/klavye), çizim yapma gibi isteklerin gönderilmesini sağlar.
-- X11 istemcilerinin çalışması için en temel ve gerekli kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

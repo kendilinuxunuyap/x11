@@ -1,8 +1,7 @@
 .. _libevdev:
 **libevdev**
 ============
-Linux tabanlı sistemlerde, evdev (event device) tabanlı giriş aygıtlarını (fareler, klavyeler, dokunmatik ekranlar vb.) yönetmek için kullanılan bir C kütüphanesidir. libevdev, giriş olaylarını okuma, yazma ve yapılandırma işlemleri sağlar ve bu sayede evdev aygıtları ile etkileşimi kolaylaştırır.
-
+Giriş aygıtlarını yönetmek için kullanılan bir C kütüphanesidir.
 
 **Paketi Derleme :**
 --------------------

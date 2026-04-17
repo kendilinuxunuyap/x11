@@ -1,12 +1,7 @@
 .. _libXrandr:
 **libXrandr**
 =============
-X11 sisteminde çalışan uygulamalara, ekran çözünürlüğü ve yönü gibi ekran yapılandırmalarını dinamik olarak değiştirme yeteneği kazandıran RandR (Resize and Rotate) uzantısının istemci kütüphanesidir.
-
-- Çözünürlük değiştirme: Monitör çözünürlüğü uygulama içinden değiştirilebilir.
-- Ekran yönü: Ekran döndürme (örneğin dikey moda geçme) yapılabilir.
-- Çoklu monitör desteği: Aynı anda birden fazla ekranı yapılandırabilir; konumlarını, çözünürlüklerini ve hizalamalarını değiştirebilir.
-- Olay takibi: Ekran bağlantı/ayrılma olaylarını dinleyebilir (örneğin dizüstü bilgisayara ikinci ekran bağlandığında algılama).
+Ekran çözünürlüğü için gerekli kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

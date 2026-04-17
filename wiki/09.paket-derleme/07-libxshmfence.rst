@@ -1,7 +1,7 @@
 .. _libxshmfence:
 **libxshmfence**
 ================
-X11 grafik sistemi için geliştirilmiş küçük ve özel amaçlı bir kütüphanedir. Temel görevi, paylaşılan bellek üzerinden eşzamanlama sağlamaktır.
+X11 için geliştirilmiş, paylaşılan bellek üzerinden eşzamanlama sağlayan küçük ve özel amaçlı bir kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

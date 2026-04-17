@@ -1,7 +1,7 @@
 .. _fontconfig:
 **fontconfig**
 ==============
-Linux ve Unix benzeri sistemlerde kullanılan, yazı tiplerini keşfetme, yapılandırma ve yönetme işlevini sağlayan bir kütüphane ve araç setidir. Sistem üzerindeki tüm yazı tiplerini tarar, organize eder ve uygulamaların kolayca kullanabilmesi için standart bir API sunar.
+Sistemdeki tüm yazı tiplerini yönetimini ve kullanımını kolaylaştıran paket.
 
 **Paketi Derleme :**
 --------------------

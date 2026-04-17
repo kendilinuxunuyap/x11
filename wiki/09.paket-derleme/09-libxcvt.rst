@@ -1,7 +1,8 @@
 .. _libxcvt:
 **libxcvt**
 ===========
-**VESA CVT** standardına uygun olarak ekran çözünürlüğü ve zamanlama bilgileri hesaplayan bir kütüphanedir. Yeni ekran çözünürlükleri oluşturmak için kullanılan hesaplama kütüphanesidir.
+VESA CVT ekran çözünürlükleri için kullanılan bir kütüphanedir.
+
 
 **Paketi Derleme :**
 --------------------

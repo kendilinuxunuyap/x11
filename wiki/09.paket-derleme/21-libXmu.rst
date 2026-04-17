@@ -1,10 +1,7 @@
 .. _libXmu:
 **libXmu**
 ==========
-X11 pencere sistemi için çeşitli yardımcı işlevler sağlayan bir kütüphanedir. X uygulamaları tarafından sık kullanılan, ancak temel X kütüphanelerinde bulunmayan bazı ek fonksiyonları içerir.
-
-X11 uygulamalarında pencere işlemleri, iletişim kutuları ve pencere özniteliklerine erişim gibi yardımcı işlevler için kullanılır.
-
+X11 pencere sistemi için gerekli ek kütüphanedir.
 **Paketi Derleme :**
 --------------------
 

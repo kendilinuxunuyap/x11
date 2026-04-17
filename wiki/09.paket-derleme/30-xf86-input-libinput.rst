@@ -1,7 +1,7 @@
 .. _xf86-input-libinput:
 **xf86-input-libinput**
 =======================
-X11 için modern giriş aygıtı sürücüsü sağlayan bir kütüphanedir. Bu sürücü, özellikle dokunmatik ekranlar, fareler, klavyeler ve çoklu dokunmatik yüzeyler gibi giriş aygıtlarını yönetir.
+X11 için giriş aygıtlarının yönetimini sağlayan bir kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

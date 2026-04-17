@@ -3,7 +3,7 @@
 **xcalc**
 =========
 
-X11 (X Pencere Sistemi) üzerinde çalışan basit bir grafiksel hesap makinesi uygulamasıdır.
+X11 üzerinde çalışan hesap makinesi uygulamasıdır.
 
 **Paketi Derleme :**
 --------------------

@@ -1,7 +1,7 @@
 .. _libpciaccess:
 **libpciaccess**
 ================
-PCI (Peripheral Component Interconnect) aygıtlarına erişim sağlayan düşük seviyeli bir kütüphanedir. Genellikle Linux ve Unix benzeri sistemlerde, özellikle X.Org (grafik sunucusu) projelerinde ve bazı sürücülerde kullanılır.
+PCI, özellikle Linux/Unix sistemlerde kullanılan; donanım aygıtlarına (özellikle X.Org ve sürücülerde) düşük seviyede erişim sağlayan bir kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

@@ -1,7 +1,7 @@
 .. _pixman:
 **pixman**
 ==========
-Pixman, grafik işlemleri için kullanılan düşük seviyeli bir kütüphanedir. Temel amacı, pikseller üzerinde doğrudan işlemler yapmaktır. 
+Pixman, grafik işlemleri için kullanılan kütüphanedir. 
 
 **Paketi Derleme :**
 --------------------

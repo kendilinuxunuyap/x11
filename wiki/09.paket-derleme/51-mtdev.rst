@@ -2,8 +2,7 @@
 **mtdev**
 =========
 
-**multitouch** (çoklu dokunma) aygıtlarını yönetmek için kullanılan bir Linux kütüphanesi ve giriş aygıtı sürücüsüdür. Özellikle çoklu dokunmatik yüzeyler (multitouch touchpads, dokunmatik ekranlar vb.) ile çalışır ve çoklu dokunma olaylarını işler.
-
+**multitouch** (çoklu dokunma) aygıtlarını için sürücüdür.
 **Paketi Derleme :**
 --------------------
 

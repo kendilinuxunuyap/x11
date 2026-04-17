@@ -1,7 +1,8 @@
 .. _libfontenc:
 **libfontenc**
 ==============
-X11 sistemlerinde kullanılan yazı tipi kodlama bilgilerini işleyen bir kütüphanedir. Bu kütüphane genellikle bitmap fontları işlerken ve yazı tipi dönüştürmeleri yapılırken kullanılır.
+X11 sistemlerinde yazı tipi kodlama bilgilerini işleyen bir kütüphanedir.
+
 
 **Paketi Derleme :**
 --------------------

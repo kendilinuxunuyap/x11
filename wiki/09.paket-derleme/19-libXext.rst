@@ -1,7 +1,7 @@
 .. _libXext:
 **libXext**
 ===========
-X sunucusundaki ek özelliklerin (uzantıların) istemciler tarafından kolayca kullanılmasını sağlayan bir kütüphanedir.
+Xorg için ek kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

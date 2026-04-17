@@ -1,7 +1,7 @@
 .. _libXi:
 **libXi**
 =========
-X11 (X Pencere Sistemi) için X Input Extension (Giriş Uzantısı) işlevlerini sağlayan bir kütüphanedir. X istemcilerinin klavye, fare, dokunmatik ekran gibi giriş aygıtlarına erişmesini ve bu aygıtlarla etkileşime geçmesini sağlar.
+X uygulamarında giriş aygıtlarına erişmesini sağlar.
 
 **Paketi Derleme :**
 --------------------

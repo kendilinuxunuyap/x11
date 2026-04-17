@@ -1,11 +1,7 @@
 .. _libICE:
 **libICE**
 ==========
-X11 pencere sistemi altında çalışan istemciler (uygulamalar) arasında protokol tabanlı iletişim kurmayı sağlayan bir kütüphanedir.
-
-- libICE, X istemcilerinin birbirleriyle veri alışverişi yapmasını sağlar.
-- ICE protokolü üzerinden bağlantı yönetimi, oturumlar arası veri paylaşımı ve kontrol sağlar.
-- Genellikle libSM (Session Management) gibi üst düzey kütüphaneler tarafından kullanılır.
+Uygulamalar arasında protokol tabanlı iletişimi sağlayan bir kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

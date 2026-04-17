@@ -1,7 +1,8 @@
 .. _freetype:
 **freetype**
 ============
-Açık kaynaklı bir yazı tipi motorudur. Çeşitli yazı tipi dosyalarını çözümleyip ekranda yüksek kaliteli metinlerin piksel piksel çizilmesini sağlar.
+Yazı tipi motorudur.
+
 
 **Paketi Derleme :**
 --------------------

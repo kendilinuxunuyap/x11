@@ -1,7 +1,7 @@
 .. _libXau:
 **libXau**
 ==========
-X11 (X Window System) ile birlikte kullanılan bir yetkilendirme (authentication) kütüphanesidir. X istemcileri ile X sunucusu  arasında bağlantı kurulurken güvenlik doğrulaması sağlar.
+X11 ile kullanılan, istemci ile sunucu arasındaki bağlantıda kimlik doğrulaması yapan bir yetkilendirme kütüphanesidir.
 
 **Paketi Derleme :**
 --------------------

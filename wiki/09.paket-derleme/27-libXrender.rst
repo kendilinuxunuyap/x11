@@ -1,10 +1,7 @@
 .. _libXrender:
 **libXrender**
 ==============
-X11 pencere sistemi için 2D grafiklerin daha gelişmiş ve estetik şekilde çizilmesini sağlayan bir kütüphanedir. X sunucusundaki Render (Rendere) uzantısını kullanan istemci tarafı arayüzüdür.
-
-- X11 Render uzantısına erişim sağlar ve yarı saydamlık, alfa kanalı, yumuşatma gibi gelişmiş grafik özelliklerini destekler.
-- libX11 üzerine inşa edilmiştir; onun sunduğu temel çizim işlevlerini görüntü olarak zenginleştirir.
+2D grafikler için  gerekli bir kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

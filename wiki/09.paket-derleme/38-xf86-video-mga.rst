@@ -1,9 +1,7 @@
 .. _xf86-video-mga:
 **xf86-video-mga**
 ==================
-Matrox grafik kartları için geliştirilmiş bir X11 video sürücüsüdür. Matrox'un MGA (Matrox Graphics Architecture) tabanlı grafik kartlarını destekler ve genellikle eski Matrox grafik donanımlarıyla uyumludur.
-
-Matrox kartları, özellikle 3D hızlandırma ve çift monitör desteği gibi özelliklerle tanınır. Matrox'un eski grafik kartları için 2D ve bazı eski 3D grafik işlevlerini destekler.
+Matrox grafik kartları için geliştirilmiş bir video sürücüsüdür.
 
 **Paketi Derleme :**
 --------------------

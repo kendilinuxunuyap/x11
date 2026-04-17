@@ -1,7 +1,7 @@
 .. _libdrm:
 **libdrm**
 ==========
-Linux'ta kullanıcı düzeyindeki uygulamaların çekirdekteki DRM (Direct Rendering Manager) altyapısıyla iletişim kurmasını sağlayan bir ara katman kütüphanesidir. Grafik donanımına doğrudan, güvenli ve verimli erişim için kullanılır. Özellikle Mesa (OpenGL), Wayland, X.Org, ve GPU sürücüleri tarafından kullanılır.
+Linux’ta grafik donanımına güvenli ve doğrudan erişim imkânı sunan bir ara kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

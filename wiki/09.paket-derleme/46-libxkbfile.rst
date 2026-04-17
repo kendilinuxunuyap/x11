@@ -1,7 +1,7 @@
 .. _libxkbfile:
 **libxkbfile**
 ==============
-X Keyboard Extension (XKB) ile ilgili yapılandırma dosyalarını işlemek için kullanılan bir C kütüphanesidir. Bu kütüphane, X11 sistemlerinde klavye düzenleri ve klavye yapılandırmalarını okuma ve yazma işlemleri yapmak için kullanılır. libxkbfile, XKB yapılandırma dosyaları ile etkileşimde bulunmak için gereken işlevleri sağlar.
+Klavye yapılandırması için kullanılan kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

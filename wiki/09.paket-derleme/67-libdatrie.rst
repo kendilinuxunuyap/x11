@@ -1,13 +1,7 @@
 .. _libdatrie:
 **libdatrie**
 =============
-Trie (preﬁx tree) veri yapısını kullanan bir C kütüphanesidir. Hızlı arama, önek eşleşmesi (prefix matching) ve sıralama gibi işlemleri gerçekleştiren veritabanlarında ve metin işleme uygulamalarında kullanılır.
-
-- Prefix arama: Trie yapısı sayesinde verilen bir önek (prefix) ile başlayan kelimeleri hızlı bir şekilde bulabilirsiniz.
-- Sıralama: Trie yapısındaki veriler doğal sıralıdır, bu yüzden veri sıralaması sağlanabilir.
-- Hızlı arama: Trie, özellikle çok büyük veri kümesinde yapılan aramaları çok hızlı hale getirir.
-- Bellek verimliliği: Trie yapısında depolanan veriler sıkıştırılabilir, bu da bellek kullanımını optimize eder.
-
+Veri yapısı için kullanılan bir C kütüphanesidir.
 
 
 **Paketi Derleme :**

@@ -1,7 +1,7 @@
 .. _xf86-video-vesa:
 **xf86-video-vesa**
 ===================
-X11 için geliştirilmiş, genel amaçlı bir video sürücüsüdür. **VESA** (Video Electronics Standards Association) standartlarına dayanan grafik kartlarıyla çalışır ve donanım bağımsız olarak ekran çıkışı sağlar.
+Genel amaçlı bir video sürücüsü.
 
 **Paketi Derleme :**
 --------------------

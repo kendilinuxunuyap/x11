@@ -1,7 +1,7 @@
 .. _fribidi:
 **fribidi**
 ===========
-Tam adıyla **GNU FriBidi**, Unicode metinlerde sağdan sola (RTL - Right-To-Left) yazım desteği sağlayan bir bi-directional (bidi) metin işleme kütüphanesidir. Özellikle Arapça, İbranice, Farsça gibi sağdan sola yazılan dillerin düzgün görüntülenmesi için kullanılır.
+Unicode metinlerde metin işleme kütüphanesidir.
 
 **Paketi Derleme :**
 --------------------

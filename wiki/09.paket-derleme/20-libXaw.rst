@@ -1,8 +1,7 @@
 .. _libXaw:
 **libXaw**
 ==========
-X11 için geliştirilmiş klasik bir grafik kullanıcı arayüzü (GUI) widget kütüphanesidir. X Window System üzerinde temel GUI bileşenleri (düğmeler, listeler, menüler, metin kutuları vb.) sağlar.
-
+Grafik kullanıcı arayüzü (GUI) kütüphanesidir.
 **Paketi Derleme :**
 --------------------
 

@@ -1,11 +1,6 @@
 **dbus**
 ========
-D-Bus, Linux ve diğer Unix benzeri sistemlerde kullanılan bir mesajlaşma sistemidir (inter-process communication - IPC).  Süreçler (Procesler) arasında veri alışverişi yapılmasını sağlar ve sistem ile uygulamalar arasında iletişim kurmak için kullanılır.
-
-- D-Bus, süreçlerin birbirine mesaj göndermesini sağlar. Bu mesajlar, metod çağrıları, sinyaller veya hata mesajları olabilir.
-- Sistem genelinde hizmetler (örneğin, donanım yönetimi, ağ servisleri) için kullanılır.
-- Kullanıcı oturumuna özgü uygulamalar arasında iletişim için kullanılır (örneğin, masaüstü uygulamaları).
-- Çoğu Linux dağıtımında standart olarak bulunur ve masaüstü ortamları (GNOME, KDE) tarafından yaygın şekilde kullanılır.
+D-Bus, süreçlerin birbiriyle haberleşmesini sağlayan mesajlaşma sistemidir.
 
 **Paketi Derleme :**
 --------------------

@@ -1,7 +1,7 @@
 .. _libpng:
 **libpng**
 ==========
-**Portable Network Graphics** (PNG) formatındaki resim dosyalarını okumak ve yazmak için kullanılan açık kaynaklı bir kütüphanedir.
+**Portable Network Graphics** (PNG) formatındaki resim için kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

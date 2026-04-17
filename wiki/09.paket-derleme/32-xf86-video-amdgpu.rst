@@ -1,7 +1,7 @@
 .. _xf86-video-amdgpu:
 **xf86-video-amdgpu**
 =====================
-**AMD** grafik kartları için X11 video sürücüsüdür ve **AMD Radeon** ve **AMD Vega** serisi grafik kartlarıyla uyumlu çalışır. Bu sürücü, **amdgpu** adlı açık kaynaklı AMD GPU sürücüsünü kullanarak, X.Org Server'da donanım hızlandırması ve yüksek performanslı grafik işlevi sağlar.
+**AMD** grafik kartları için X11 video sürücüsüdür.
 
 **Paketi Derleme :**
 --------------------

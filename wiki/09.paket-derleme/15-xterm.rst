@@ -1,7 +1,7 @@
 .. _xterm:
 **xterm**
 =========
-Unix ve Linux sistemlerde kullanılan klasik, sade ve hafif bir terminal emülatörüdür.
+Terminal emülatörüdür.
 
 **Paketi Derleme :**
 --------------------

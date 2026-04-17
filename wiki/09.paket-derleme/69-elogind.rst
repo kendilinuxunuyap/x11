@@ -1,12 +1,7 @@
 **elogind**
 ===========
 
-Linux’ta oturum (session) yönetimi sağlayan, systemd-logind’in bağımsız bir sürümüdür. Özellikle systemd kullanmayan sistemler için  geliştirilmiştir. Temel işlemleri şunlardır;
-
-1. Kullanıcı oturumlarını izler ve yönetir.
-2. Donanım erişim izinlerini kontrol eder (ses, kamera vb.).
-3. D-Bus üzerinden masaüstü ortamlarıyla iletişim kurar.
-4. PAM ile kimlik doğrulamayı destekler.
+Linux’ta oturum (session) yönetimi sağlayan pakettir.
 
 
 **Paketi Derleme :**

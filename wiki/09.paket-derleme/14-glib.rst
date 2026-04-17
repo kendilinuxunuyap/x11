@@ -1,7 +1,7 @@
 .. _glib:
 **glib**
 ========
-**GNOME** projesi tarafından geliştirilen, C programlama dili için temel yardımcı kütüphanedir. C programlama dilinde sıkça ihtiyaç duyulan veri yapıları, dize işlemleri, bellek yönetimi, iş parçacığı yönetimi, olay döngüsü, sinyal sistemi gibi birçok temel fonksiyonu sağlar.
+**GNOME** tarafından geliştirilen, C programlama dili için temel kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

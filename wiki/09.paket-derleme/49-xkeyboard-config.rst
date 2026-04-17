@@ -1,7 +1,7 @@
 .. _xkeyboard-config:
 **xkeyboard-config**
 ====================
-X11 sistemlerinde klavye düzenlerini (layout) ve klavye seçeneklerini yapılandırmak için kullanılan bir konfigürasyon dosyası paketidir. Bu paket, X Keyboard Extension (XKB) kullanarak, farklı klavye düzenlerinin, tuş atamalarının ve klavye seçeneklerinin yönetilmesini sağlar.
+X11 sistemlerinde klavye yapılandırması ve klavye seçeneklerinin yönetilmesini sağlar.
 
 **Paketi Derleme :**
 --------------------

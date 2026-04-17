@@ -1,9 +1,7 @@
 .. _xf86-video-fbdev:
 **xf86-video-fbdev**
 ====================
-**framebuffer (fbdev)** tabanlı grafik kartları için X11 video sürücüsüdür. Framebuffer, ekranın bir bellek alanında (genellikle bir RAM tamponu) saklandığı bir yöntemdir, bu da daha düşük seviyede ve donanım bağımsız bir ekran çıkışı sağlar.
-
-fbdev, düşük seviyede grafik işleme sağlar, ancak donanım hızlandırma veya 3D grafik desteği sunmaz.
+**framebuffer (fbdev)**  video sürücüsüdür.
 
 **Paketi Derleme :**
 --------------------

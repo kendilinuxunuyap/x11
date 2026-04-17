@@ -1,13 +1,8 @@
 .. _xinit:
 **xinit**
 =========
-X Pencere Sistemi (X11) için kullanılan bir başlatıcı komuttur. X sunucusunu başlatmak ve onunla birlikte bir istemci (örneğin bir pencere yöneticisi veya masaüstü ortamı) çalıştırmak için kullanılır.
+X11 için kullanılan, X sunucusunu başlatıp ardından belirtilen istemciyi çalıştıran bir komuttur. Grafik arayüzü olmayan sistemlerde veya özel oturumlarda kullanılır ve çalıştırılacak istemciler genellikle `~/.xinitrc` ile belirlenir.
 
-xinit, doğrudan X sunucusunu başlatır ve ardından kullanıcı tarafından belirtilen bir istemci programı çalıştırır (örneğin: xterm, startkde, startxfce4, vs.).
-
-Genellikle grafik arayüzü olmayan sistemlerde veya özel oturumlarda kullanılır.
-
-~/.xinitrc dosyası aracılığıyla hangi istemcilerin çalıştırılacağı belirlenebilir.
 
 **Paketi Derleme :**
 --------------------

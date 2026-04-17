@@ -1,16 +1,7 @@
 **libunwind**
 =============
 
-bir programın çağrı yığınını (call stack) incelemek ve bu yığında geri gitmek (unwind etmek) için kullanılan bir kütüphanedir. Genellikle hata ayıklama (debugging), profil oluşturma (profiling), çökme sonrası analiz (crash analysis) ve istisna (exception) yönetimi gibi işlemler için kullanılır.
-
-**Kullanım Alanları**
----------------------
-
-- **Hata ayıklama araçları:** GDB, Valgrind gibi hata ayıklama araçları ``libunwind``'i çağrı yığınlarını çözümlemek için kullanabilir.
-- **Çökme raporlama sistemleri:** Bir program çöktüğünde hangi fonksiyonların çağrıldığını gösteren geri izleme bilgileri üretmek için kullanılır.
-- **Profiling araçları:** Programın performansını analiz eden araçlarda yığın bilgisi toplamak için kullanılabilir.
-- **Özel hata yönetimi sistemleri:** Kendi hata yönetimi veya istisna işleme mekanizmasını yazmak isteyen sistem yazılımcıları için uygundur.
-
+Bir programın çağrı yığınını yönetmek için kullanılan bir kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

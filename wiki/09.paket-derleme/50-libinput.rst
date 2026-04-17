@@ -1,7 +1,7 @@
 .. _libinput:
 **libinput**
 ============
-Giriş aygıtlarını (klavye, fare, dokunmatik ekran, vb.) yönetmek için kullanılan, açık kaynaklı bir kütüphanedir. Özellikle Linux ve Wayland tabanlı sistemlerde, giriş aygıtlarının doğru şekilde çalışmasını sağlamak amacıyla geliştirilmiştir. Modern ekran sunucuları ve giriş yönetim sistemlerinde giriş cihazlarının doğru bir şekilde işlev göstermesini sağlar.
+Giriş aygıtlarını yönetmek için bir kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

@@ -1,7 +1,7 @@
 .. _libSM:
 **libSM**
 =========
-X11 pencere sisteminde oturum yönetimi (session management) işlevlerini sağlayan bir kütüphanedir. Uygulamaların, oturum kapanmadan önce kayıt yapmasını, sonraki oturumda kaldığı yerden devam etmesini mümkün kılar.
+X11 pencere sisteminde oturum yönetimi için gerekli kütüphanedir. 
 
 **Paketi Derleme :**
 --------------------

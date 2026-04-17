@@ -1,7 +1,7 @@
 .. _libxcb:
 **libxcb**
 ==========
-X11 protokolüne erişim sağlamak için geliştirilmiş, düşük seviyeli, modern ve verimli bir istemci kütüphanesidir. libX11 kütüphanesinin daha hızlı ve daha modüler bir alternatifi veya tamamlayıcısı olarak tasarlanmıştır.
+X11 için geerewkli temel kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

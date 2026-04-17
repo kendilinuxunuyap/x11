@@ -1,7 +1,7 @@
 .. _libwacom:
 **libwacom**
 ============
-Linux sistemlerinde wacom tabletleri ve diğer dokunmatik grafik aygıtları için geliştirilmiş bir açık kaynaklı kütüphanedir. Wacom tabletleri ile etkileşimi sağlamak için tasarlanmıştır ve tablet yapılandırmasını, düğme ve kalem hassasiyetini yönetmek için kullanılır.
+Dokunmatik grafik aygıtları için geliştirilmiş bir kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

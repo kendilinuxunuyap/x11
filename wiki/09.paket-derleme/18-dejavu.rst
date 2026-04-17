@@ -1,7 +1,7 @@
 .. _dejavu:
 **dejavu**
 ==========
-Açık kaynaklı ve geniş kapsamlı bir yazı tipi ailesidir. Çok sayıda dil ve karakter setini kapsayan, özgür ve kaliteli fontlar sağlar.
+Yazı tipi.
 
 **Paketi Derleme :**
 --------------------

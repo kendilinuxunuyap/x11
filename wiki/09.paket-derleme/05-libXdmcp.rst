@@ -1,7 +1,7 @@
 .. _libXdmcp:
 **libXdmcp**
 ============
-**X Display Manager Control Protocol Library**, X11 grafik sistemi kapsamında kullanılan ve uzak X istemcileriyle oturum yönetimi yapmaya yarayan bir kütüphanedir.
+X11 kapsamında, uzak istemcilerle oturum yönetimini sağlayan bir kütüphanedir
 
 
 **Paketi Derleme :**

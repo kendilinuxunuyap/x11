@@ -1,7 +1,7 @@
 .. _xf86-video-r128:
 **xf86-video-r128**
 ===================
-ATI R128 serisi grafik kartları için geliştirilmiş bir X11 video sürücüsüdür. Bu sürücü, ATI R128 (Rage 128) tabanlı grafik kartları için 2D grafik hızlandırma ve ekran yönetimi sağlar.
+ATI R128 serisi grafik kartları için video sürücüsüdür.
 
 **Paketi Derleme :**
 --------------------

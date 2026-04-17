@@ -1,10 +1,7 @@
 .. _xf86-video-intel:
 **xf86-video-intel**
 ====================
-Intel grafik kartları için X11 video sürücüsüdür ve Intel HD Graphics ve Intel Iris Graphics gibi entegre grafik çözümleri için optimize edilmiştir. Intel'in entegre GPU'ları için X.Org Server altında yüksek performanslı 2D ve 3D grafik işleme sağlar.
-
-Intel'in eski grafik donanımları için daha fazla uyum ve performans sağlarken, yeni Intel GPU'ları için artık yerini i915 ve mesa gibi yeni sürücülere bırakmıştır.
-
+Intel grafik kartları için video sürücüsüdür.
 **Paketi Derleme :**
 --------------------
 

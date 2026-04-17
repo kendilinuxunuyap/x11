@@ -1,7 +1,7 @@
 .. _libffi:
 **libffi**
 ==========
-C programlarının başka dillerde yazılmış (örneğin Python, Ruby, Lua gibi) fonksiyonları çalışma zamanında çağırabilmesini sağlayan bir düşük seviyeli programlama kütüphanesidir. Adı "foreign function interface" yani "yabancı fonksiyon arayüzü" anlamına gelir.
+Programlama kütüphanesidir.
 
 **Paketi Derleme :**
 --------------------

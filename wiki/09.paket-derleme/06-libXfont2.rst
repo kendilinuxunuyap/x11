@@ -1,8 +1,7 @@
 .. _libXfont2:
 **libXfont2**
 =============
-X sunucusu tarafından kullanılan bir yazı tipi erişim ve yönetim kütüphanesidir. X sunucusunun çeşitli font kaynaklarına erişmesini sağlar.
-
+X sunucusunun font kaynaklarına erişmesini ve bunları yönetmesini sağlayan bir kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

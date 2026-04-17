@@ -1,7 +1,7 @@
 .. _libglvnd:
 **libglvnd**
 ============
-OpenGL (GL), OpenGL ES ve Vulkan gibi grafik API'leri için grafik sürücü yönetimini standartlaştıran ve modernize eden bir kütüphanedir. libglvnd, özellikle bir sistemde birden fazla grafik sürücüsünün çalışmasına olanak tanır ve farklı sürücüler arasında dinamik yükleme ve bağımlılık yönetimi sağlar.
+OpenGL (GL), grafik sürücü yönetimini için kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

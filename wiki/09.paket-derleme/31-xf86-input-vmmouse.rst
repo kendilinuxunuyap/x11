@@ -1,7 +1,7 @@
 .. _xf86-input-vmmouse:
 **xf86-input-vmmouse**
 ======================
-Sanallaştırılmış ortamlar için geliştirilen bir giriş aygıtı sürücüsüdür. Sanal makinelerde çalışan X11 sistemlerinde fareyi doğru şekilde yönetmek için kullanılır.
+Sanallaştırılmış ortamlarda fareyi yönetmek için kullanılır.
 
 **Paketi Derleme :**
 --------------------

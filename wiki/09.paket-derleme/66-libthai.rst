@@ -1,7 +1,7 @@
 .. _libthai:
 **libthai**
 ===========
-Tayland yazı sistemini (Thai script) işlemek ve düzenlemek için kullanılan bir C kütüphanesidir. Özellikle Tayland alfabesinde yazılmış metinleri işlemek için geliştirilmiştir ve Unicode destekli metin işleme sağlar.
+Tayland yazı sistemini için gerekli C kütüphanesidir.
 
 **Paketi Derleme :**
 --------------------

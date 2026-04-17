@@ -1,7 +1,7 @@
 .. _xkbcomp:
 **xkbcomp**
 ===========
-X Keyboard Extension (XKB) ile ilgili yapılandırma dosyalarını oluşturmak ve düzenlemek için kullanılan bir komut satırı aracıdır. XKB, X11 sistemlerinde klavye düzenleri ve klavye özelliklerini yönetmek için kullanılan bir mekanizmadır. Özellikle XKB yapılandırma dosyalarını X11 sunucusuna yüklemek için kullanılır.
+Klavye yapılandırma için kullanılan bir komut satırı aracıdır.
 
 **Paketi Derleme :**
 --------------------

@@ -1,7 +1,7 @@
 .. _libXt:
 **libXt**
 =========
-X11 pencere sistemi için widget tabanlı GUI (grafik kullanıcı arayüzü) uygulamaları geliştirmeyi kolaylaştıran temel bir araç takımı altyapısı sağlayan bir kütüphanedir.
+GUI (grafik kullanıcı arayüzü) uygulamaları için gerekli bir kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

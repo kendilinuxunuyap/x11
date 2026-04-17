@@ -1,7 +1,7 @@
 .. _libXinerama:
 **libXinerama**
 ===============
-Xinerama, birden fazla fiziksel monitörü tek bir sanal ekran gibi kullanmayı sağlayan bir X11 uzantısıdır. **libXinerama** ise bu uzantıya erişim sağlayan istemci taraflı bir kütüphanedir.
+Moniör için gerekli kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

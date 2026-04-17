@@ -1,9 +1,7 @@
 .. _libXpm:
 **libXpm**
 ==========
-X11 pencere sistemi için **XPM (X PixMap)** formatındaki görüntü dosyalarını işlemek üzere kullanılan bir kütüphanedir.
-
-XPM, özellikle X11 uygulamalarında simge, buton ve diğer grafik öğeleri için kullanılan metin tabanlı bir bitmap görüntü formatıdır.
+**XPM (X PixMap)** formatındaki dosyalarını işlemek üzere kullanılan bir kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

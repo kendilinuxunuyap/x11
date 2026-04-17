@@ -1,7 +1,7 @@
 .. _libgudev:
 **libgudev**
 ============
-Linux tabanlı sistemlerde donanım aygıtlarını yönetmek için kullanılan bir C kütüphanesidir. udev (Linux'un cihaz yöneticisi) ile uyumlu çalışarak, sistemdeki donanım aygıtları ile etkileşimi kolaylaştırır. libgudev, özellikle donanım aygıtlarının tanınması, bağlantı ve bağlantı olaylarının izlenmesi gibi işlevleri yönetir.
+Donanım aygıtlarını yönetmek için kullanılan bir C kütüphanesidir.
 
 **Paketi Derleme :**
 --------------------

@@ -3,12 +3,8 @@
 **xorg-server**
 ===============
 
-Linux ve Unix-benzeri sistemlerde grafik kullanıcı arayüzünün çalışmasını sağlayan bir **görüntü sunucusudur**.
-
-"**X.Org Foundation**" tarafından geliştirilen **X Window System**'in (X11) bir parçasıdır.
-
-Bir uygulama, X protokolü üzerinden bir pencere açmak istediğinde, bu pencereyi ekrana **xorg-server** çizer.
-
+Linux sistemlerinde grafik kullanıcı arayüzünün çalışmasını sağlayan bir **görüntü sunucusudur**.
+X pencere sisteminin en önemli paketidir.
 
 **Paketi Derleme :**
 --------------------

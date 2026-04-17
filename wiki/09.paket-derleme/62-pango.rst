@@ -1,8 +1,7 @@
 .. _pango:
 **pango**
 =========
-Modern uygulamalar için tasarlanmış bir metin yerleşim ve işleme (text layout and rendering) kütüphanesidir. Özellikle çok dilli ve uluslararası metinleri doğru ve düzgün biçimde çizmek için kullanılır.
-
+Metin işleme kütüphanesidir. 
 **Paketi Derleme :**
 --------------------
 
