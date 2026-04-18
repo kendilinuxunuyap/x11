@@ -32,12 +32,14 @@ Xorg yalnızca pencereyi oluşturur. Pencereyi taşıma, kapatma, büyütme ve k
 Xorg + Openbox => Grafik ortamda çalışan bir sistem oluşturur.
 
 
-**4- Giriş Ekranı + Oturum Başlatıcı (Display Manager)**
---------------------------------------------------------
+**4- Giriş Ekranı Yöneticisi (Display Manager)**
+------------------------------------------------
 
-Sistem açıldığında kullanıcı seçimi ve parola ekranı sunar. Girişten sonra kullanıcı oturumunu (masaüstü yöneticisini) başlatır.  
+Giriş ekranı yöneticisi, sistem açıldığında kullanıcı seçimi ve parola ekranı sunar.  
+Girişten sonra kullanıcı oturumunu (masaüstü yöneticisini) başlatır.  
 
-Tercih edilen giriş ekranı yöneticileri(gdm, lightdm, lxdm). X Pencere Sistemi için zorunlu değildir.
+Tercih edilen giriş ekranı yöneticileri: gdm, lightdm, lxdm.  
+X Pencere Sistemi için zorunlu değildir.
 
 
 **5- Masaüstü Yöneticisi (Desktop Manager)**
