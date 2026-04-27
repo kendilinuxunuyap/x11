@@ -1,4 +1,5 @@
 .. _libxcvt:
+
 **libxcvt**
 ===========
 VESA CVT ekran çözünürlükleri için kullanılan bir kütüphanedir.

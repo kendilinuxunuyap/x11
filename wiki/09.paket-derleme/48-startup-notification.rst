@@ -1,4 +1,5 @@
 .. _startup-notification:
+
 **startup-notification**
 ========================
 Bilgilendirme(uygulama mesajları) için kullanılan bir pakettir.

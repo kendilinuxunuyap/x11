@@ -1,6 +1,8 @@
 .. _xf86-video-nouveau:
+
 **xf86-video-nouveau**
 ======================
+
 NVIDIA grafik kartları için video sürücüsüdür.
 
 **Paketi Derleme :**
@@ -34,7 +36,7 @@ NVIDIA grafik kartları için video sürücüsüdür.
 		make install DESTDIR=$DESTDIR
 	}
 	
-Ek dosyaları indirmek için `tıklayınız. <https://kendilinuxunuyap.github.io/_static/files/xf86-video-nouveau/files.tar>`_
+Ek dosyaları indirmek için `tıklayınız.. <https://kendilinuxunuyap.github.io/_static/files/xf86-video-nouveau/files.tar>`_
 
 
 

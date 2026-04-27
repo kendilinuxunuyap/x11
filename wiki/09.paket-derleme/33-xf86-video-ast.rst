@@ -1,4 +1,5 @@
 .. _xf86-video-ast:
+
 **xf86-video-ast**
 ==================
 **AST (Advanced Systems Technology)** grafik kartları için video sürücüsüdür.

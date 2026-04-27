@@ -1,4 +1,5 @@
 .. _fribidi:
+
 **fribidi**
 ===========
 Unicode metinlerde metin işleme kütüphanesidir.

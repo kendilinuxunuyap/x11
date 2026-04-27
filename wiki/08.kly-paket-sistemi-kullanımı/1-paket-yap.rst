@@ -1,4 +1,5 @@
 .. _klypaketyap:
+
 **kly Paket Sistemiyle Paket Yapma**
 ------------------------------------
 
@@ -33,6 +34,7 @@ kly paket sistemi ile paket yapma işlemini Debian ortamında yapacağız. Debia
 		cd $DESTDIR/bin
 		ln -s bash sh
 	}
+	
 **klybild dosyalarında Kullanılan Değişkenler**
 -----------------------------------------------
 

@@ -1,4 +1,5 @@
 .. _libwacom:
+
 **libwacom**
 ============
 Dokunmatik grafik aygıtları için geliştirilmiş bir kütüphanedir.

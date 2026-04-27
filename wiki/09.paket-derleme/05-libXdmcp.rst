@@ -1,4 +1,5 @@
 .. _libXdmcp:
+
 **libXdmcp**
 ============
 X11 kapsamında, uzak istemcilerle oturum yönetimini sağlayan bir kütüphanedir

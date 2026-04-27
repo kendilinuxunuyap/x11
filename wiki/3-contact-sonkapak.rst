@@ -1,6 +1,8 @@
 .. _gelistiricimesaji:
+
 **Geliştiricilere Mesajımız**
 =============================
+
 .. toctree::
 	:glob:
 

@@ -1,4 +1,5 @@
 .. _xf86-video-ati:
+
 **xf86-video-ati**
 ==================
 AMD/ATI grafik kartları için video sürücüsüdür.

@@ -1,4 +1,5 @@
 .. _libthai:
+
 **libthai**
 ===========
 Tayland yazı sistemini için gerekli C kütüphanesidir.

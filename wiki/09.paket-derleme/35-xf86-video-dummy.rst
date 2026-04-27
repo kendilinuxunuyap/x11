@@ -1,4 +1,5 @@
 .. _xf86-video-dummy:
+
 **xf86-video-dummy**
 ====================
 Dummy video sürücüsüdür.

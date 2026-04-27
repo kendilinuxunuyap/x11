@@ -1,4 +1,5 @@
 .. _libinput:
+
 **libinput**
 ============
 Giriş aygıtlarını yönetmek için bir kütüphanedir.

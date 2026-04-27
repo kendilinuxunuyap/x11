@@ -1,4 +1,5 @@
 .. _xf86-video-vesa:
+
 **xf86-video-vesa**
 ===================
 Genel amaçlı bir video sürücüsü.

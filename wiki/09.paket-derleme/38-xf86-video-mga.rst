@@ -1,4 +1,5 @@
 .. _xf86-video-mga:
+
 **xf86-video-mga**
 ==================
 Matrox grafik kartları için geliştirilmiş bir video sürücüsüdür.

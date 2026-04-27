@@ -1,4 +1,5 @@
 .. _libevdev:
+
 **libevdev**
 ============
 Giriş aygıtlarını yönetmek için kullanılan bir C kütüphanesidir.

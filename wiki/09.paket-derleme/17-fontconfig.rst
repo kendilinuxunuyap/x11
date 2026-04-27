@@ -1,4 +1,5 @@
 .. _fontconfig:
+
 **fontconfig**
 ==============
 Sistemdeki tüm yazı tiplerini yönetimini ve kullanımını kolaylaştıran paket.

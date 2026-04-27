@@ -1,6 +1,8 @@
 .. _xf86-input-vmmouse:
+
 **xf86-input-vmmouse**
 ======================
+
 Sanallaştırılmış ortamlarda fareyi yönetmek için kullanılır.
 
 **Paketi Derleme :**

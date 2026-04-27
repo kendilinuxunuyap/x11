@@ -1,6 +1,8 @@
 .. _xinit:
+
 **xinit**
 =========
+
 X11 için kullanılan, X sunucusunu başlatıp ardından belirtilen istemciyi çalıştıran bir komuttur. Grafik arayüzü olmayan sistemlerde veya özel oturumlarda kullanılır ve çalıştırılacak istemciler genellikle `~/.xinitrc` ile belirlenir.
 
 
@@ -50,7 +52,7 @@ X11 için kullanılan, X sunucusunu başlatıp ardından belirtilen istemciyi ç
 		chmod 754 "$DESTDIR"/etc/X11/xinit/xinitrc.d/10-local.sh
 	}
 
-Ek dosyaları indirmek için `tıklayınız. <https://kendilinuxunuyap.github.io/_static/files/xinit/files.tar>`_
+Ek dosyaları indirmek için `tıklayınız.. <https://kendilinuxunuyap.github.io/_static/files/xinit/files.tar>`_
 
 
 **Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_

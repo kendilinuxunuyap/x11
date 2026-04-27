@@ -1,4 +1,5 @@
 .. _libXi:
+
 **libXi**
 =========
 X uygulamarında giriş aygıtlarına erişmesini sağlar.

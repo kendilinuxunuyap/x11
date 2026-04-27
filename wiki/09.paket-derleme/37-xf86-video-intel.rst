@@ -1,7 +1,10 @@
 .. _xf86-video-intel:
+
 **xf86-video-intel**
 ====================
+
 Intel grafik kartları için video sürücüsüdür.
+
 **Paketi Derleme :**
 --------------------
 

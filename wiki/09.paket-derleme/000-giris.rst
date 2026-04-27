@@ -1,4 +1,5 @@
 .. _giris:
+
 **Ön Hazırlık**
 ---------------
 
@@ -27,7 +28,7 @@ kopyaladığımız paketi **Temel Sistem** üzerine kuracağız. Oluşturduğumu
 
 
 **xorg ve x11'in Çalışması için Gerekli Paketler**
------------------------------------------------
+--------------------------------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -88,13 +89,13 @@ kopyaladığımız paketi **Temel Sistem** üzerine kuracağız. Oluşturduğumu
      - 67- :ref:`libdatrie`
    * - 18- :ref:`dejavu`
      - 43- :ref:`xf86-video-vesa`
-     - 68- 
+     - 68- :ref:`dbus`
    * - 19- :ref:`libXext`
      - 44- :ref:`xf86-video-vmware`
-     - 69- 
+     - 69- :ref:`elogind`
    * - 20- :ref:`libXaw`
      - 45- :ref:`xkbcomp`
-     - 70- 
+     - 70- :ref:`libunwind`
    * - 21- :ref:`libXmu`
      - 46- :ref:`libxkbfile`
      - 71- 

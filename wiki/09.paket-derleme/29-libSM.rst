@@ -1,4 +1,5 @@
 .. _libSM:
+
 **libSM**
 =========
 X11 pencere sisteminde oturum yönetimi için gerekli kütüphanedir. 

@@ -1,4 +1,5 @@
 .. _libXfixes:
+
 **libXfixes**
 =============
  Xfixes uzantısı içiçn grekeli kütüphanedir.

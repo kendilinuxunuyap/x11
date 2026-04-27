@@ -1,4 +1,5 @@
 .. _xf86-video-fbdev:
+
 **xf86-video-fbdev**
 ====================
 **framebuffer (fbdev)**  video sürücüsüdür.

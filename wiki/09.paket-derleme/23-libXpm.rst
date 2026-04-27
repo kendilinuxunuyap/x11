@@ -1,4 +1,5 @@
 .. _libXpm:
+
 **libXpm**
 ==========
 **XPM (X PixMap)** formatındaki dosyalarını işlemek üzere kullanılan bir kütüphanedir.

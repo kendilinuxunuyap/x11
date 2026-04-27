@@ -1,4 +1,5 @@
 .. _libgudev:
+
 **libgudev**
 ============
 Donanım aygıtlarını yönetmek için kullanılan bir C kütüphanesidir.

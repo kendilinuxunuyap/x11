@@ -1,4 +1,5 @@
 .. _xf86-video-amdgpu:
+
 **xf86-video-amdgpu**
 =====================
 **AMD** grafik kartları için X11 video sürücüsüdür.

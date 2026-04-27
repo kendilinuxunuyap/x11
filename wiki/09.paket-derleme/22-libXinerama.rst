@@ -1,4 +1,5 @@
 .. _libXinerama:
+
 **libXinerama**
 ===============
 Moniör için gerekli kütüphanedir.

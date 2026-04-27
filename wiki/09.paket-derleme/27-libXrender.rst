@@ -1,4 +1,5 @@
 .. _libXrender:
+
 **libXrender**
 ==============
 2D grafikler için  gerekli bir kütüphanedir.

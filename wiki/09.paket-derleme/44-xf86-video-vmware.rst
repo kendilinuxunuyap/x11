@@ -1,4 +1,5 @@
 .. _xf86-video-vmware:
+
 **xf86-video-vmware**
 =====================
 VMware sanal makineleri için video sürücüsüdür.

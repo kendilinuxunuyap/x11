@@ -1,4 +1,5 @@
 .. _xkeyboard-config:
+
 **xkeyboard-config**
 ====================
 X11 sistemlerinde klavye yapılandırması ve klavye seçeneklerinin yönetilmesini sağlar.

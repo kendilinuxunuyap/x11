@@ -1,4 +1,5 @@
 .. _libpciaccess:
+
 **libpciaccess**
 ================
 PCI, özellikle Linux/Unix sistemlerde kullanılan; donanım aygıtlarına (özellikle X.Org ve sürücülerde) düşük seviyede erişim sağlayan bir kütüphanedir.

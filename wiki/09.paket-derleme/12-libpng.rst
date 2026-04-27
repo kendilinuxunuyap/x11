@@ -1,4 +1,5 @@
 .. _libpng:
+
 **libpng**
 ==========
 **Portable Network Graphics** (PNG) formatındaki resim için kütüphanedir.

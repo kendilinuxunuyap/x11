@@ -1,5 +1,8 @@
+.. _dbus:
+
 **dbus**
 ========
+
 D-Bus, süreçlerin birbiriyle haberleşmesini sağlayan mesajlaşma sistemidir.
 
 **Paketi Derleme :**
@@ -44,7 +47,7 @@ D-Bus, süreçlerin birbiriyle haberleşmesini sağlayan mesajlaşma sistemidir.
     }
 
 	
-Ek dosyaları indirmek için `tıklayınız. <https://kendilinuxunuyap.github.io/_static/files/dbus/files.tar>`_
+Ek dosyaları indirmek için `tıklayınız.. <https://kendilinuxunuyap.github.io/_static/files/dbus/files.tar>`_
 
 **Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_
 

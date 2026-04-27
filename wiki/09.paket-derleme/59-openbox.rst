@@ -1,4 +1,5 @@
 .. _openbox:
+
 **openbox**
 ===========
 X11 için bir pencere yöneticisidir.

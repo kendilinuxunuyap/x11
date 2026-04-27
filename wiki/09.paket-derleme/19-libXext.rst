@@ -1,4 +1,5 @@
 .. _libXext:
+
 **libXext**
 ===========
 Xorg için ek kütüphanedir.

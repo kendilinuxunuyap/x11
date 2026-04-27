@@ -1,4 +1,5 @@
 .. _libXt:
+
 **libXt**
 =========
 GUI (grafik kullanıcı arayüzü) uygulamaları için gerekli bir kütüphanedir.

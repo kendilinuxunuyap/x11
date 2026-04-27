@@ -1,4 +1,5 @@
 .. _libXau:
+
 **libXau**
 ==========
 X11 ile kullanılan, istemci ile sunucu arasındaki bağlantıda kimlik doğrulaması yapan bir yetkilendirme kütüphanesidir.

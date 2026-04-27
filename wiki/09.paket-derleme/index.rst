@@ -1,6 +1,8 @@
 .. _paketderleme:
+
 **GNU Araçlarıyla xorg ve x11 Derleme**
 =======================================
+
 .. toctree::
 	:glob:
 

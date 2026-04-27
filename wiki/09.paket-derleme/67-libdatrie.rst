@@ -1,4 +1,5 @@
 .. _libdatrie:
+
 **libdatrie**
 =============
 Veri yapısı için kullanılan bir C kütüphanesidir.

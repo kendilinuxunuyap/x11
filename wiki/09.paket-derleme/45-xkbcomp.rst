@@ -1,4 +1,5 @@
 .. _xkbcomp:
+
 **xkbcomp**
 ===========
 Klavye yapılandırma için kullanılan bir komut satırı aracıdır.

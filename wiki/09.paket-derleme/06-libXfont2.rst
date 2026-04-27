@@ -1,4 +1,5 @@
 .. _libXfont2:
+
 **libXfont2**
 =============
 X sunucusunun font kaynaklarına erişmesini ve bunları yönetmesini sağlayan bir kütüphanedir.

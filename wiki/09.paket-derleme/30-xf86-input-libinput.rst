@@ -1,4 +1,5 @@
 .. _xf86-input-libinput:
+
 **xf86-input-libinput**
 =======================
 X11 için giriş aygıtlarının yönetimini sağlayan bir kütüphanedir.

@@ -1,4 +1,5 @@
 .. _libXrandr:
+
 **libXrandr**
 =============
 Ekran çözünürlüğü için gerekli kütüphanedir.

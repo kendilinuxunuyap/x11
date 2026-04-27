@@ -3,8 +3,8 @@
 
 Bir uygulamanın kodları genellikle çalışmaz(python benzeri kodlar istisna). Bu kodlardan sistemlerin çalışması için çalışabilir dosyalar üretilir(linuxta ikili dosya, elf, windowsta exe, com vb.). Bu çalışabilir dosyaları koddan oluştururken iki faklı şekilde oluşturabiliriz.
 
-1. **Paylaşımlı Derleme(dynamic):** Kendine lazım olan kütüphaneleri sistem üzerindeki başka uygulamalarla ortak kullanır. 
-2. **Paylaşımsız, gömülü(static):** Kendisine lazım olan kütütphaneleri kendi içinde barındırır(porable uygulama gibi).
+- **Paylaşımlı Derleme(dynamic):** Kendine lazım olan kütüphaneleri sistem üzerindeki başka uygulamalarla ortak kullanır. 
+- **Paylaşımsız, gömülü(static):** Kendisine lazım olan kütütphaneleri kendi içinde barındırır(porable uygulama gibi).
 
 Şimdi aşağıdaki kaynak kodumuzu iki farklı yöntemle derleyelim.
 
@@ -17,8 +17,8 @@ Bir uygulamanın kodları genellikle çalışmaz(python benzeri kodlar istisna).
 	}
 
 
-**2-Paylaşımlı Derleme(dynamic):** 
---------------------------------
+**1-Paylaşımlı Derleme(dynamic):** 
+----------------------------------
 
 Derlenen uygulama  sistemde bulunan kütüphaneleri kullanacak şeklide derlenmesidir. Uygulama boyutu küçüktür, taşınabirliği sınırlanabilir.
 Aşağıdaki gibi derlenir.
@@ -68,7 +68,7 @@ Kütüphanelerde değişiklik yapılmışsa ve hemen bu değişikliği sistemin 
    PageBreak
 
 **2-Paylaşımsız, gömülü(static):**
---------------------------------
+----------------------------------
 
 Derlenen uygulama sistemde  bulunan ve çalışması için gerekli olan kütüphaneleri uygulama içine dahil eden bir derleme yöntemidir. Uygulamamızı static derlemek için  **-static** parametresi ekleyerek derlenir.
 

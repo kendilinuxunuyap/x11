@@ -1,4 +1,5 @@
 .. _xf86-video-siliconmotion:
+
 **xf86-video-siliconmotion**
 ============================
 **Silicon Motion** grafik kartları için video sürücüsüdür.

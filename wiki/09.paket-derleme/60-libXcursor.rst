@@ -1,4 +1,5 @@
 .. _libXcursor:
+
 **libXcursor**
 ==============
 Fare imleci (cursor) yönetimini geliştiren bir kütüphanedir.

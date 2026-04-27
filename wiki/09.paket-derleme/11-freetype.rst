@@ -1,4 +1,5 @@
 .. _freetype:
+
 **freetype**
 ============
 Yazı tipi motorudur.

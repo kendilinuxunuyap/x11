@@ -1,4 +1,5 @@
 .. _libxshmfence:
+
 **libxshmfence**
 ================
 X11 için geliştirilmiş, paylaşılan bellek üzerinden eşzamanlama sağlayan küçük ve özel amaçlı bir kütüphanedir.
