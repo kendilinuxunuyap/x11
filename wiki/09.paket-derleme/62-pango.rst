@@ -1,7 +1,9 @@
 .. _pango:
 **pango**
 =========
+
 Metin işleme kütüphanesidir. 
+
 **Paketi Derleme :**
 --------------------
 

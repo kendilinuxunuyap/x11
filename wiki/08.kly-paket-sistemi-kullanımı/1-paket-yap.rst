@@ -9,7 +9,7 @@ kly paket sistemi ile paket yapma işlemini Debian ortamında yapacağız. Debia
 .. image:: /_static/images/kly-paket-yap1.png
   :width: 600
  
-**klybuild** dosyasının içerine aşağıdaki kodu ekleyiniz.
+**klybuild** dosyasının içeriğine aşağıdaki kodu ekleyiniz.
 
 .. code-block:: bash
 
@@ -42,7 +42,7 @@ kly paket sistemi ile paket yapma işlemini Debian ortamında yapacağız. Debia
 - **PACKAGEDIR:** $(pwd) → Derleme scriptinin bulunduğu dizin
 - **SOURCEDIR:** /home/$user/distro/build/${name}-${version} → Kaynak dizin
 
-Değişkenleri dereleme scripleri içinde kullanılmaktadır. Örneğin, kaynak dizinde işlem yapmak için sadece **$SOURCEDIR** kullanmanız yeterlidir. Bu yapılar tüm paketlerde geçerli olacak.
+Değişkenleri derleme scripleri içinde kullanılmaktadır. Örneğin, kaynak dizinde işlem yapmak için sadece **$SOURCEDIR** kullanmanız yeterlidir. Bu yapılar tüm paketlerde geçerli olacak.
 
 
 **Not:** Bazı paketlerin ek dosyaları olabilir. Derleme scripti altında **Ek dosya için tıklayınız** bağlantısını(link) kullanarak ek dosyaları indirin ve paketin dizini içine çıkartınız. **bash** paketinin ek dosyaları olsaydı **bash** dizini içine indiğimiz dosyayı  arşivde çıkartacaktık. 
@@ -70,7 +70,7 @@ Aşağıda **bash** dizinini parametre olarak vererek **bash** paketimizin derle
 .. image:: /_static/images/kly-paket-yap4.png
   :width: 600
 
-Derleme işlemi paketin büyüklüğüne bağlı olarak zaman alacaktır. Paket derlemesi bittikten sonra aşağıda görüldüğü gibi termina çıktısı almalısınız. Sorun çıkması durumunda terminalde hata mesajları alırsınız.
+Derleme işlemi paketin büyüklüğüne bağlı olarak zaman alacaktır. Paket derlemesi bittikten sonra aşağıda görüldüğü gibi terminal çıktısı almalısınız. Sorun çıkması durumunda terminalde hata mesajları alırsınız.
 
 .. image:: /_static/images/kly-paket-yap5.png
   :width: 600

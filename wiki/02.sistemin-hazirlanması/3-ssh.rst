@@ -1,7 +1,7 @@
 **Temel Sisteme openssh ile Bağlanma**
 --------------------------------------
 
-ssh terminal üzerinden uzak bilgisayarlara erişim yapan bir uygulamadır. **Temel Sistem** içerisinde ssh paketi derlendi ve açılışta aktif hale gelmektedir. ssh kullanımı **Yardımcı Konular** bölümünde anlatılmıştır.
+ssh terminal üzerinden uzak bilgisayarlara erişim yapan bir uygulamadır. **Temel Sistem** içerisinde ssh paketi derlendi ve açılışta aktif hale getirildi. ssh kullanımı **Yardımcı Konular** bölümünde anlatılmıştır.
 
 Aşağıda **kly Temel Sisteme ssh** ile erişimin nasıl yapıldığı görülmektedir.
 
