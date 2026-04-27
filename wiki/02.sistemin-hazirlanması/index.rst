@@ -1,7 +1,9 @@
 .. _sistemhazirlanmasi:
+
 **Temel Sistemin Hazırlanması**
 ===============================
-.. toctree::
-	:glob:
 
-	[0-9]*
+.. toctree::
+   :glob:
+
+   [0-9]*

@@ -10,13 +10,42 @@
    Lisansın bir kopyasını şu adresten edinebilirsiniz:
    https://www.gnu.org/licenses/gpl-3.0.html
 
+|
+
+|
+
+|
+
+|
 
 **İletişim**
 ++++++++++++
 
-- https://github.com/x11
-- https://x11.github.io
+- https://github.com/kendilinuxunuyap
+- https://kendilinuxunuyap.github.io/x11
 - kendilinuxunuyap@gmail.com
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+
+**ISBN:** 978-
+
+|
+
+**Yayın Yılı:** Nisan 2026
+
 
 
 
