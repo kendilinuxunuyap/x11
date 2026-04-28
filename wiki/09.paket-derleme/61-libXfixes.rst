@@ -2,7 +2,7 @@
 
 **libXfixes**
 =============
- Xfixes uzantısı içiçn grekeli kütüphanedir.
+ Xfixes uzantısı için gerekli kütüphanedir.
 
 **Paketi Derleme :**
 --------------------

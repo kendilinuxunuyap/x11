@@ -64,7 +64,3 @@ Xorg'u Durdurma
 
 Xorg'u durdurmak için, terminalde Ctrl + Alt + Backspace tuş kombinasyonunu kullanabilirsiniz. Bu, X sunucusunu kapatacaktır.
 
-.. raw:: pdf
-
-   PageBreak
-

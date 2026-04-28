@@ -2,7 +2,9 @@
 
 **libXaw**
 ==========
+
 Grafik kullanıcı arayüzü (GUI) kütüphanesidir.
+
 **Paketi Derleme :**
 --------------------
 

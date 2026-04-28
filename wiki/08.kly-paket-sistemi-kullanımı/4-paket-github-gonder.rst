@@ -87,8 +87,15 @@ Yerelde(bilgisayarda) istediğiniz yere(masaüstünü tercih ettim) indirilir(kl
 .............................
 
 
-Aşağıdaki script kly paket dosyalarımızı olduğu dizinde tek tek açarak içerisinden **klybuild** dosyalarını çıkartır. Paketle ilgili bilgileri alıp **index.lst** dosyası oluşturmaktadır. İstersek paketler local ortamdada index oluşturabiliriz. Bu dokümanda github üzerinde oluşturacak şekilde anlatılmıştır. Paket indeksi oluşturan **index.lst** dosyası aşağıdaki gibi olacaktır. Listede name, version ve depends(bağımlı olduğu paketler) bilgileri bulunmaktadır. Bilgilerin arasında **|** karekteri kullanılmıştır.
+Aşağıdaki script kly paket dosyalarımızın olduğu dizinde tek tek açarak içerisinden **klybuild** dosyalarını çıkartır. Paketle ilgili bilgileri alıp **index.lst** dosyası oluşturulmaktadır. İstersek paketlerin local ortamda da index dosyasını oluşturabiliriz. Bu dokümanda github üzerinde oluşturacak şekilde anlatılmıştır. Paket listesinin olduğu **index.lst** dosyası aşağıdaki gibi olacaktır. Listede name, version ve depends(bağımlı olduğu paketler) bilgileri bulunmaktadır. Bilgilerin arasında **|** karekteri kullanılmıştır.
 
+.. code-block:: shell
+
+	name="acl"|version="2.3.1"|depends="attr"|acl
+	name="attr"|version="2.5.1"|depends=""|attr
+	name="audit"|version='3.1.1'|depends=""|audit
+	name="bash"|version="5.2.21"|depends="glibc,readline,ncurses"|bash
+|
 
 .. image:: /_static/images/github80.png
   :width: 600
@@ -135,7 +142,7 @@ github'a dosya gönderdiğimizde **index** bash scriptimizi çalıştırması i�
 .. image:: /_static/images/github8.png
   :width: 600
 
-**main.yml** dosyasısdaki **sh index** satırı **index** scriptimizi her githuba paket gönderdiğimizde(commit) çalışacak ve **index.lst** dosyasını oluşturacaktır. **main.yml** içeriğine aşağıdaki kodları ekleyiniz.
+**main.yml** dosyasındaki **sh index** satırı **index** scriptimizi her githuba paket gönderdiğimizde(commit) çalışacak ve **index.lst** dosyasını oluşturacaktır. **main.yml** içeriğine aşağıdaki kodları ekleyiniz.
 
 
 .. code-block:: shell
@@ -173,7 +180,7 @@ github'a dosya gönderdiğimizde **index** bash scriptimizi çalıştırması i�
 		            files: |
 		              /output/*
 
-**Not:** Burada **main.yml** dosyasında **[ master ]** ifadesi **master** dalında çılışıldığını ifade eder. Eğer faklı dalla açılışıyorsak buradaki **[ master ]** yerine kullandığınız dalı yazınız.
+**Not:** Burada **main.yml** dosyasında **[ master ]** ifadesi **master** dalında çılışıldığını ifade eder. Eğer farklı dalla çalışıyorsak buradaki **[ master ]** yerine kullandığınız dalı yazınız.
 
 .. raw:: pdf
 

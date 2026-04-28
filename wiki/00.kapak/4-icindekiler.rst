@@ -19,11 +19,11 @@
    * - 7- :ref:`xpenceresistemi`
      - 110
    * - 8- :ref:`yardimcikonular`
-     - 113
+     - 112
    * - 9- :ref:`kaynaklar`
-     - 142
+     - 141
    * - 10- :ref:`gelistiricimesaji`
-     - 143
+     - 142
  
 .. raw:: pdf
 

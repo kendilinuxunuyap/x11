@@ -57,7 +57,7 @@ GitHub ana sayfasına gidin ve hesabınıza giriş yapın. Eğer bir hesabınız
 **github Varsayılan Dal Ayarı:**
 --------------------------------
 
-githubda varsayılan olarak eskilede master, yeni sürümlerde main kullanılmaktadır. Projelermizde ve burad kullanılan yapılarda **master** kullanıldığı için aşağıda görülduğü gibi varsalılan dalı  **master** yapıyoruz.
+githubda varsayılan olarak eski sürümlerde master, yeni sürümlerde main kullanılmaktadır. Projelerimizde ve burada kullanılan yapılarda **master** kullanıldığı için aşağıda görülduğü gibi varsalılan dalı  **master** yapıyoruz.
 
 .. image:: /_static/images/github-master.png
   :width: 600
@@ -132,7 +132,7 @@ github'dan indirmek için; **clone veya pull**  kullanmalıyız.
 **Dal(Branch):**
 ----------------
 
-Dal projenin birden fazla kişi ile yapılmasında veya yeni özellikler eklenmek istediğinde projenin bir kopyası ile çalışma gerektirir. Aşağıda dal işlemleri içinkomutlar verilmiştir.
+Dal projenin birden fazla kişi ile yapılmasında veya yeni özellikler eklenmek istediğinde projenin bir kopyası ile çalışma gerektirir. Aşağıda dal işlemleri için komutlar verilmiştir.
 
 **Yeni Dal Oluşturmak, Seçmek ve Yeni Dalı github'a Göndermek:**
 

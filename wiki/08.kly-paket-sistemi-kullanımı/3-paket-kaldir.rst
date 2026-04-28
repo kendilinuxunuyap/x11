@@ -8,7 +8,7 @@ Aşağıda **bash** paketinin nasıl kaldırılacağı görülmektedir.
 .. image:: /_static/images/kly-paket-kaldir1.png
   :width: 600
   
-Bazı paketleri **(glibc, ncurses, readline, bash)** tasarladığımız **kly** paket sisteminde kaldırılmasını engelledik. Bu paketler kalması durumunda sistem kullanılamaz hale gelir. Eğer değişiklik gerekiyorsa sadece yeniden kurulum yapılabilir. Aşağıda paketin kaldırılamadığı mesajı görülmektedir.
+Bazı paketleri **(glibc, ncurses, readline, bash)** tasarladığımız **kly** paket sisteminde kaldırılmasını engelledik. Bu paketler kalkması durumunda sistem kullanılamaz hale gelir. Eğer değişiklik gerekiyorsa sadece yeniden kurulum yapılabilir. Aşağıda paketin kaldırılamadığı mesajı görülmektedir.
 
 .. image:: /_static/images/kly-paket-kaldir2.png
   :width: 600

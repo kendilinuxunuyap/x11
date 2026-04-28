@@ -1,7 +1,7 @@
 **kly ile Paket Listelerini Güncelleme**
 ----------------------------------------
 
-**kly Paket Sistemi** yerelde **.kly** paketlerini **kly -pi paket.kly** şeklinde kurulabilir. Ama bütün paketlerin yerelde olması bu sistemi kullanacak kişi sayısını sınırlandıracak ve birkaç  kişiyi geçmeyecektir. Paketleri internet ortamında tutmak sistemi kullanacak kişilerin sayısnı artıracak ve istenilen zaman ve konumda paketlere erişim imkanı sunacaktır. 
+**kly Paket Sistemi** yerelde **.kly** paket dosyalarını **kly -pi paket.kly** komutuyla kuralabilir. Ama bütün paketlerin yerelde olması bu sistemi kullanacak kişi sayısını sınırlandıracak ve birkaç  kişiyi geçmeyecektir. Paketleri internet ortamında tutmak sistemi kullanacak kişilerin sayısını artıracak ve istenilen zaman ve konumda paketlere erişim imkanı sunacaktır. 
 
 
 kly paketleri github üzerinde tutulmaktadır. Bu paketlerin listesini tutan index dosyası github ortamında **https://github.com/kendilinuxunuyap/kly-binary-packages/releases/download/current/index.lst** adresinde tutulmaktadır. Bu adresi sisteme kaydetmeliyizki güncelleme sırasında bu adreslerden güncel **index.lst** dosyasını yerele indirebilmeli. Adreslerin listesini tutan dosyamız **/etc/kly/sources.list** konumunda tutulmaktadır. Debianda da benzer(/etc/apt/sources.list) durum bulunmaktadır.

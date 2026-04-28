@@ -2,7 +2,9 @@
 
 **harfbuzz**
 ============
-Metin şekillendirme (text shaping) kütüphanesi. 
+
+Metin şekillendirme (text shaping) kütüphanesi.
+
 **Paketi Derleme :**
 --------------------
 
