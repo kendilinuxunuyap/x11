@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>kly Paket Sistemiyle Paket Yapma &#8212; distro Wiki  belgelendirmesi</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="canonical" href="https://kendilinuxunuyap.github.io/08.kly-paket-sistemi-kullanımı/1-paket-yap.html" />
+    <link rel="index" title="Dizin" href="../genindex.html" />
+    <link rel="search" title="Ara" href="../search.html" />
+    <link rel="next" title="kly ile Paket Kur" href="2-paket-kur.html" />
+    <link rel="prev" title="kly Paket Siteminin Debian&#39;a Kurulumu" href="0-kly.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="kly-paket-sistemiyle-paket-yapma">
+<span id="klypaketyap"></span><h1><strong>kly Paket Sistemiyle Paket Yapma</strong><a class="headerlink" href="#kly-paket-sistemiyle-paket-yapma" title="Permalink to this heading">¶</a></h1>
+<p>kly paket sistemi ile paket yapma işlemini Debian ortamında yapacağız. Debian üzerinde paket sistemimizi oluşturan scriptimiz <strong>/bin/kly</strong> konumunda olması gerekmektedir.</p>
+<p>Şimdi <strong>bash</strong> paketinin <strong>kly Paket Sistemi</strong>'ni kullanarak derlemesini yapalım. Paket için aşağıda görüldüğü gibi masaüstüne <strong>kly-paket</strong> dizini oluşturuldu. <strong>kly-paket</strong>  dizini içine <strong>bash</strong> dizini oluşturuldu. <strong>bash</strong> dizini içine <strong>klybuild</strong> dosyası oluşturuldu.</p>
+<a class="reference internal image-reference" href="../_images/kly-paket-yap1.png"><img alt="../_images/kly-paket-yap1.png" src="../_images/kly-paket-yap1.png" style="width: 600px;" /></a>
+<p><strong>klybuild</strong> dosyasının içeriğine aşağıdaki kodu ekleyiniz.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env bash</span>
+<span class="nv">version</span><span class="o">=</span><span class="s2">&quot;5.2.21&quot;</span>
+<span class="nv">name</span><span class="o">=</span><span class="s2">&quot;bash&quot;</span>
+<span class="nv">depends</span><span class="o">=</span><span class="s2">&quot;glibc,readline,ncurses&quot;</span>
+<span class="nv">description</span><span class="o">=</span><span class="s2">&quot;GNU/Linux dağıtımında ön tanımlı kabuk&quot;</span>
+<span class="nv">source</span><span class="o">=</span><span class="s2">&quot;https://ftp.gnu.org/pub/gnu/bash/</span><span class="si">${</span><span class="nv">name</span><span class="si">}</span><span class="s2">-</span><span class="si">${</span><span class="nv">version</span><span class="si">}</span><span class="s2">.tar.gz&quot;</span>
+<span class="nv">groups</span><span class="o">=</span><span class="s2">&quot;app.shell&quot;</span>
+setup<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$SOURCEDIR</span>
+<span class="w">        </span>./configure<span class="w"> </span>--prefix<span class="o">=</span>/usr<span class="w"> </span>--libdir<span class="o">=</span>/usr/lib64<span class="w">   </span>--bindir<span class="o">=</span>/bin<span class="w"> </span><span class="se">\</span>
+<span class="w">                </span>--with-curses<span class="w"> </span>--enable-readline<span class="w"> </span>--without-bash-malloc
+<span class="o">}</span>
+build<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>make
+<span class="o">}</span>
+package<span class="o">()</span><span class="w">       </span><span class="o">{</span>
+<span class="w">        </span>make<span class="w"> </span>install<span class="w"> </span><span class="nv">DESTDIR</span><span class="o">=</span><span class="nv">$DESTDIR</span>
+<span class="w">        </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$DESTDIR</span>/bin
+<span class="w">        </span>ln<span class="w"> </span>-s<span class="w"> </span>bash<span class="w"> </span>sh
+<span class="o">}</span>
+</pre></div>
+</div>
+</section>
+<section id="klybild-dosyalarinda-kullanilan-degiskenler">
+<h1><strong>klybild dosyalarında Kullanılan Değişkenler</strong><a class="headerlink" href="#klybild-dosyalarinda-kullanilan-degiskenler" title="Permalink to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><strong>ROOTBUILDDIR:</strong> /home/$user/distro/build → Derleme dizini</p></li>
+<li><p><strong>BUILDDIR:</strong> /home/$user/distro/build/build-${name}-${version} → Paket derleme dizini</p></li>
+<li><p><strong>DESTDIR:</strong> /home/$user/distro/rootfs → Yükleme dizini</p></li>
+<li><p><strong>PACKAGEDIR:</strong> $(pwd) → Derleme scriptinin bulunduğu dizin</p></li>
+<li><p><strong>SOURCEDIR:</strong> /home/$user/distro/build/${name}-${version} → Kaynak dizin</p></li>
+</ul>
+<p>Değişkenleri derleme scripleri içinde kullanılmaktadır. Örneğin, kaynak dizinde işlem yapmak için sadece <strong>$SOURCEDIR</strong> kullanmanız yeterlidir. Bu yapılar tüm paketlerde geçerli olacak.</p>
+<p><strong>Not:</strong> Bazı paketlerin ek dosyaları olabilir. Derleme scripti altında <strong>Ek dosya için tıklayınız</strong> bağlantısını(link) kullanarak ek dosyaları indirin ve paketin dizini içine çıkartınız. <strong>bash</strong> paketinin ek dosyaları olsaydı <strong>bash</strong> dizini içine indiğimiz dosyayı  arşivde çıkartacaktık.</p>
+<p><strong>kly-paket</strong> dizini konumunda aşağıdaki gibi terminal açınız.</p>
+<a class="reference internal image-reference" href="../_images/kly-paket-yap2.png"><img alt="../_images/kly-paket-yap2.png" src="../_images/kly-paket-yap2.png" style="width: 600px;" /></a>
+<p>Açılan terminalde aşağıda görüldüğü gibi komutu çalıştırınız. komut hangi konumda çalıştırılmışsa <strong>.kly</strong> uzantılı pakeyimiz orada oluşacaktır. Siz istediğiniz yerde çalıştırabilirsiniz. Önemli olan paket için oluştuduğunuz <strong>klybuild</strong> dosyanınızın konumunu doğru vermeniz.</p>
+<a class="reference internal image-reference" href="../_images/kly-paket-yap3.png"><img alt="../_images/kly-paket-yap3.png" src="../_images/kly-paket-yap3.png" style="width: 600px;" /></a>
+<p>Aşağıda <strong>bash</strong> dizinini parametre olarak vererek <strong>bash</strong> paketimizin derlemesini başlatıyoruz.</p>
+<a class="reference internal image-reference" href="../_images/kly-paket-yap4.png"><img alt="../_images/kly-paket-yap4.png" src="../_images/kly-paket-yap4.png" style="width: 600px;" /></a>
+<p>Derleme işlemi paketin büyüklüğüne bağlı olarak zaman alacaktır. Paket derlemesi bittikten sonra aşağıda görüldüğü gibi terminal çıktısı almalısınız. Sorun çıkması durumunda terminalde hata mesajları alırsınız.</p>
+<a class="reference internal image-reference" href="../_images/kly-paket-yap5.png"><img alt="../_images/kly-paket-yap5.png" src="../_images/kly-paket-yap5.png" style="width: 600px;" /></a>
+<p>Derleme işlemi bittikten sonra <strong>kly-paket/bash</strong> dizini komununda  aşağıda görüldüğü gibi <strong>bash-5.2.21.kly</strong> paketimizi oluşturacaktır.</p>
+<a class="reference internal image-reference" href="../_images/kly-paket-yap6.png"><img alt="../_images/kly-paket-yap6.png" src="../_images/kly-paket-yap6.png" style="width: 600px;" /></a>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+<h3>Gezinti</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/2-yazar.html"><strong>Yazar</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/2-yazar.html#paket-derleme"><strong>Paket Derleme</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/2-yazar.html#iletisim"><strong>İletişim</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/3-onsoz.html">Ön Söz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/4-icindekiler.html">İçindekiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01.giris/index.html"><strong>Temel Kavramlar</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02.sistemin-hazirlanmas%C4%B1/index.html"><strong>Temel Sistemin Hazırlanması</strong></a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>kly Paket Sistemi Kullanımı</strong></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="0-kly.html"><strong>kly Paket Siteminin Debian'a Kurulumu</strong></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><strong>kly Paket Sistemiyle Paket Yapma</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#klybild-dosyalarinda-kullanilan-degiskenler"><strong>klybild dosyalarında Kullanılan Değişkenler</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="2-paket-kur.html"><strong>kly ile Paket Kur</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="3-paket-kaldir.html"><strong>kly ile Paket Kaldir</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="4-paket-github-gonder.html"><strong>kly Paketlerini Githuba Yükleme ve İndexleme</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="5-paket-guncelle.html"><strong>kly ile Paket Listelerini Güncelleme</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../09.paket-derleme/index.html"><strong>GNU Araçlarıyla xorg ve x11 Derleme</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10.iso-hazirlama/index.html"><strong>ISO Hazırlama</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12.sistemin-calistirma-inceleme/index.html">Oluşan Sistemin Çalıştırılması İncelenmesi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../14.xpencere-sistemi/index.html">X Pencere Sistemi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../15.yardimci-konular/index.html">Yardımcı Konular</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2-kaynak.html"><strong>Kaynaklar</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3-contact-sonkapak.html"><strong>Geliştiricilere Mesajımız</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4-lisans.html"><strong>Lisans Bilgileri</strong></a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;distro 2023.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/08.kly-paket-sistemi-kullanımı/1-paket-yap.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

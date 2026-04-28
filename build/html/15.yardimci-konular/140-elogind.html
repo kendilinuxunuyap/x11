@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>elogind Yapılandırması &#8212; distro Wiki  belgelendirmesi</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="canonical" href="https://kendilinuxunuyap.github.io/15.yardimci-konular/140-elogind.html" />
+    <link rel="index" title="Dizin" href="../genindex.html" />
+    <link rel="search" title="Ara" href="../search.html" />
+    <link rel="next" title="D-Bus Yapılandırması" href="141-dbus.html" />
+    <link rel="prev" title="github" href="139-github.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="elogind-yapilandirmasi">
+<h1><strong>elogind Yapılandırması</strong><a class="headerlink" href="#elogind-yapilandirmasi" title="Permalink to this heading">¶</a></h1>
+<p>Bu belge, <strong>systemd kullanmayan</strong> sistemlerde (OpenRC tabanlı)
+elogind login manager'ın kurulumu, yapılandırılması ve gerekli
+kullanıcı/PAM/agetty ayarlarını anlatır.</p>
+<section id="gerekli-kullanici-ve-grup-tanimlari">
+<h2><strong>1. Gerekli Kullanıcı ve Grup Tanımları</strong><a class="headerlink" href="#gerekli-kullanici-ve-grup-tanimlari" title="Permalink to this heading">¶</a></h2>
+<p>elogind servisi için sistemde gerekli kullanıcı ve gruplar oluşturulur:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>groupadd<span class="w"> </span>-g<span class="w"> </span><span class="m">190</span><span class="w"> </span>systemd-journal
+groupadd<span class="w"> </span>-g<span class="w"> </span><span class="m">191</span><span class="w"> </span>elogind
+useradd<span class="w"> </span>-r<span class="w"> </span>-s<span class="w"> </span>/sbin/nologin<span class="w"> </span>-g<span class="w"> </span>elogind<span class="w"> </span>-u<span class="w"> </span><span class="m">191</span><span class="w"> </span>elogind
+</pre></div>
+</div>
+<section id="aciklama">
+<h3>Açıklama:<a class="headerlink" href="#aciklama" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><cite>systemd-journal</cite> grubu, journal log erişimi için kullanılır.</p></li>
+<li><p><cite>elogind</cite> kullanıcı ve grubu, servis için ayrılmıştır.</p></li>
+<li><p><cite>/sbin/nologin</cite> ile bu kullanıcıyla doğrudan login engellenir.</p></li>
+<li><p><cite>-r</cite> parametresi sistemi kullanıcı oluşturur, yani normal login için kullanılmaz.</p></li>
+</ul>
+</section>
+</section>
+<section id="openrc-hizmet-dosyasi-etc-init-d-elogind">
+<h2><strong>2. OpenRC Hizmet Dosyası (/etc/init.d/elogind)</strong><a class="headerlink" href="#openrc-hizmet-dosyasi-etc-init-d-elogind" title="Permalink to this heading">¶</a></h2>
+<p>OpenRC ile <cite>elogind</cite> servisini yönetmek için basit bir init script örneği:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/sbin/openrc-run</span>
+<span class="nv">description</span><span class="o">=</span><span class="s2">&quot;elogind login manager&quot;</span>
+<span class="nv">command</span><span class="o">=</span>/usr/lib/elogind/elogind
+<span class="nv">pidfile</span><span class="o">=</span>/run/elogind.pid
+
+depend<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>need<span class="w"> </span>dbus
+<span class="w">    </span>after<span class="w"> </span>dbus
+<span class="o">}</span>
+</pre></div>
+</div>
+<section id="id1">
+<h3>Açıklama:<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><cite>command</cite>: elogind daemonunu başlatır.</p></li>
+<li><p><cite>pidfile</cite>: servis PID bilgisini saklar.</p></li>
+<li><p><cite>depend()</cite>: servis başlatılmadan önce D-Bus’ın aktif olmasını garanti eder.</p></li>
+</ul>
+</section>
+</section>
+<section id="baslatma-ve-openrcye-ekleme">
+<h2><strong>3. Başlatma ve OpenRC’ye Ekleme</strong><a class="headerlink" href="#baslatma-ve-openrcye-ekleme" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rc-update<span class="w"> </span>add<span class="w"> </span>elogind<span class="w"> </span>default
+rc-service<span class="w"> </span>elogind<span class="w"> </span>start
+</pre></div>
+</div>
+<section id="id2">
+<h3>Açıklama:<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><cite>rc-update add</cite>: Servisi boot sırasında otomatik başlatmaya ekler.</p></li>
+<li><p><cite>rc-service start</cite>: Servisi hemen başlatır.</p></li>
+<li><p><strong>Önemli Kontrol:</strong> elogind’in çalışıp çalışmadığını kontrol etmek için:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>loginctl<span class="w"> </span>list-sessions
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Eğer aktif oturumlar listeleniyorsa, elogind başarıyla çalışıyor demektir.</p></li>
+</ul>
+</section>
+</section>
+<section id="pam-passwd-ve-group-ayarlari">
+<h2><strong>4. PAM, Passwd ve Group Ayarları</strong><a class="headerlink" href="#pam-passwd-ve-group-ayarlari" title="Permalink to this heading">¶</a></h2>
+<p><strong>/etc/nsswitch.conf Örneği:</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>passwd:      files
+group:       files
+shadow:      files
+</pre></div>
+</div>
+<section id="id3">
+<h3>Açıklama:<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Kullanıcı ve grup bilgileri <cite>files</cite> (yerel /etc/passwd ve /etc/group) üzerinden çözülür.</p></li>
+</ul>
+<p><strong>/etc/pam.d/system-auth Örneği:</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>auth       required     pam_unix.so
+account    required     pam_unix.so
+password   required     pam_unix.so
+session    required     pam_unix.so
+session    include      elogind-user
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Not</p>
+<p><strong>`session include elogind-user` satırı mutlaka ekli olmalıdır.</strong>
+Bu satır, kullanıcı oturumlarının elogind ile doğru şekilde yönetilmesini sağlar.
+Eğer yoksa manuel olarak eklenmelidir:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;/elogind-user/d&quot;</span><span class="w"> </span>/etc/pam.d/system-auth
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;\nsession    include    elogind-user&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/pam.d/system-auth
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="openrc-agetty-ayari">
+<h2><strong>5. OpenRC Agetty Ayarı</strong><a class="headerlink" href="#openrc-agetty-ayari" title="Permalink to this heading">¶</a></h2>
+<p>Bazı durumlarda <cite>agetty</cite>, varsayılan olarak <cite>/bin/login</cite> kullanmaz
+ve bu nedenle elogind kullanıcı oturumunu başlatamaz.</p>
+<p><strong>Ayar:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;/agetty_options/d&quot;</span><span class="w"> </span>/etc/conf.d/agetty
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;\nagetty_options=\&quot;-l /usr/bin/login\&quot;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/conf.d/agetty
+</pre></div>
+</div>
+<section id="id4">
+<h3>Açıklama:<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><cite>-l /usr/bin/login</cite> ile agetty doğru login programını çağırır.</p></li>
+<li><p>Bu ayar, sanal konsollardan kullanıcı girişlerinin doğru şekilde yapılmasını garanti eder.</p></li>
+</ul>
+</section>
+</section>
+<section id="diger-oneriler-ve-notlar">
+<h2><strong>6. Diğer Öneriler ve Notlar</strong><a class="headerlink" href="#diger-oneriler-ve-notlar" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><cite>elogind</cite>, sistemde <cite>/run/systemd</cite> gibi dizinler oluşturur; böylece bazı uygulamalar systemd’ye ihtiyaç duymadan çalışabilir.</p></li>
+<li><p>Polkit yetkilendirme sorunları genellikle kullanıcıların <cite>wheel</cite> grubuna dahil olmamasıyla ilişkilidir.</p></li>
+<li><p>OpenRC + elogind ile systemd’ye gerek kalmadan oturum yönetimi sağlanabilir.</p></li>
+</ul>
+<p><strong>Kaynaklar</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">elogind</span> <span class="n">resmi</span> <span class="n">dokümanı</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">freedesktop</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">wiki</span><span class="o">/</span><span class="n">Software</span><span class="o">/</span><span class="n">systemd</span><span class="o">/</span><span class="n">elogind</span><span class="o">/</span>
+<span class="o">-</span> <span class="n">OpenRC</span> <span class="n">belgeleri</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">wiki</span><span class="o">.</span><span class="n">gentoo</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">wiki</span><span class="o">/</span><span class="n">OpenRC</span>
+<span class="o">-</span> <span class="n">PAM</span> <span class="n">belgeleri</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">linux</span><span class="o">-</span><span class="n">pam</span><span class="o">.</span><span class="n">org</span><span class="o">/</span>
+<span class="o">-</span> <span class="n">Polkit</span> <span class="n">belgeleri</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">freedesktop</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">wiki</span><span class="o">/</span><span class="n">Software</span><span class="o">/</span><span class="n">polkit</span><span class="o">/</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+<h3>Gezinti</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/2-yazar.html"><strong>Yazar</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/2-yazar.html#paket-derleme"><strong>Paket Derleme</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/2-yazar.html#iletisim"><strong>İletişim</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/3-onsoz.html">Ön Söz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/4-icindekiler.html">İçindekiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01.giris/index.html"><strong>Temel Kavramlar</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02.sistemin-hazirlanmas%C4%B1/index.html"><strong>Temel Sistemin Hazırlanması</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08.kly-paket-sistemi-kullan%C4%B1m%C4%B1/index.html"><strong>kly Paket Sistemi Kullanımı</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09.paket-derleme/index.html"><strong>GNU Araçlarıyla xorg ve x11 Derleme</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10.iso-hazirlama/index.html"><strong>ISO Hazırlama</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12.sistemin-calistirma-inceleme/index.html">Oluşan Sistemin Çalıştırılması İncelenmesi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../14.xpencere-sistemi/index.html">X Pencere Sistemi</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Yardımcı Konular</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="019-apt.html"><strong>apt Paket Sistemi</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="100-virtualbox.html"><strong>VirtualBox</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="101-chroot.html"><strong>Chroot Nedir?</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="102-derleme-t%C3%BCrleri.html"><strong>Kaynak Kod Derleme</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="103-0.derleme-ara%C3%A7lar%C4%B1.html"><strong>Derleme Araçları</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="103-1.make.html"><strong>1-make</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="103-2.cmake.html"><strong>2-cmake</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="103-3.meson.html"><strong>3-meson</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="103-4.python.html"><strong>4-python</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="109-openrc.html"><strong>OpenRC</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="110-qemu.html"><strong>Qemu Kullanımı</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="139-github.html"><strong>github</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="139-github.html#sik-kullanilan-github-komutlari"><strong>Sık Kullanılan github Komutları</strong></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><strong>elogind Yapılandırması</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gerekli-kullanici-ve-grup-tanimlari"><strong>1. Gerekli Kullanıcı ve Grup Tanımları</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#aciklama">Açıklama:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#openrc-hizmet-dosyasi-etc-init-d-elogind"><strong>2. OpenRC Hizmet Dosyası (/etc/init.d/elogind)</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Açıklama:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#baslatma-ve-openrcye-ekleme"><strong>3. Başlatma ve OpenRC’ye Ekleme</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Açıklama:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pam-passwd-ve-group-ayarlari"><strong>4. PAM, Passwd ve Group Ayarları</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Açıklama:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#openrc-agetty-ayari"><strong>5. OpenRC Agetty Ayarı</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Açıklama:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#diger-oneriler-ve-notlar"><strong>6. Diğer Öneriler ve Notlar</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="141-dbus.html"><strong>D-Bus Yapılandırması</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2-kaynak.html"><strong>Kaynaklar</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3-contact-sonkapak.html"><strong>Geliştiricilere Mesajımız</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4-lisans.html"><strong>Lisans Bilgileri</strong></a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;distro 2023.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/15.yardimci-konular/140-elogind.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

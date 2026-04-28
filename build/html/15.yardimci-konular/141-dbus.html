@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>D-Bus Yapılandırması &#8212; distro Wiki  belgelendirmesi</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="canonical" href="https://kendilinuxunuyap.github.io/15.yardimci-konular/141-dbus.html" />
+    <link rel="index" title="Dizin" href="../genindex.html" />
+    <link rel="search" title="Ara" href="../search.html" />
+    <link rel="next" title="Kaynaklar" href="../2-kaynak.html" />
+    <link rel="prev" title="elogind Yapılandırması" href="140-elogind.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="d-bus-yapilandirmasi">
+<h1><strong>D-Bus Yapılandırması</strong><a class="headerlink" href="#d-bus-yapilandirmasi" title="Permalink to this heading">¶</a></h1>
+<p>Bu belge, <strong>systemd kullanmayan</strong> sistemlerde (OpenRC tabanlı)
+D-Bus servisinin kurulumu, yapılandırılması ve başlatılmasını anlatır.
+D-Bus, Linux ortamında uygulamalar arasında mesajlaşma sağlayan
+bir IPC (Inter-Process Communication) sistemidir.</p>
+<section id="adim-1-kullanici-ve-grup-olusturma">
+<h2><strong>Adım 1: Kullanıcı ve Grup Oluşturma</strong><a class="headerlink" href="#adim-1-kullanici-ve-grup-olusturma" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;messagebus:x:109:&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/group
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;messagebus:x:103:109::/nonexistent:/usr/sbin/nologin&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/passwd
+</pre></div>
+</div>
+</section>
+<section id="adim-2-sistem-uuid-ve-machine-id-ayari">
+<h2><strong>Adım 2: Sistem UUID ve machine-id Ayarı</strong><a class="headerlink" href="#adim-2-sistem-uuid-ve-machine-id-ayari" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span>/etc/machine-id<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>dbus-uuidgen<span class="w"> </span>--ensure<span class="o">=</span>/etc/machine-id
+<span class="k">fi</span>
+</pre></div>
+</div>
+<p><strong>Açıklama</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- `/etc/machine-id` dosyası sistemin benzersiz kimliğini tutar.
+- `dbus-uuidgen --ensure` komutu, dosya yoksa oluşturur, varsa korur.
+- Bu kimlik, D-Bus servislerinin ve bazı uygulamaların doğru çalışması için zorunludur.
+</pre></div>
+</div>
+</section>
+<section id="adim-3-dbus-daemon-launch-helper-izin-kontrolu">
+<h2><strong>Adım 3: dbus-daemon-launch-helper İzin Kontrolü</strong><a class="headerlink" href="#adim-3-dbus-daemon-launch-helper-izin-kontrolu" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span>busybox<span class="w"> </span>ls<span class="w"> </span>/bin/su<span class="w"> </span>-la<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;^...s&quot;</span><span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>chmod<span class="w"> </span><span class="m">4755</span><span class="w"> </span>/usr/libexec/dbus-daemon-launch-helper
+<span class="k">fi</span>
+</pre></div>
+</div>
+<p><strong>Açıklama</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- `dbus-daemon-launch-helper`, kullanıcı bazlı D-Bus daemonlarını başlatır.
+- SUID bitinin (4) set edilmesi, root yetkisi ile çalışmasını sağlar.
+</pre></div>
+</div>
+</section>
+<section id="adim-4-d-bus-yapilandirma-yenileme">
+<h2><strong>Adım 4: D-Bus Yapılandırma Yenileme</strong><a class="headerlink" href="#adim-4-d-bus-yapilandirma-yenileme" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dbus-send<span class="w"> </span>--system<span class="w"> </span>--type<span class="o">=</span>method_call<span class="w"> </span>--dest<span class="o">=</span>org.freedesktop.DBus<span class="w"> </span>/<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>org.freedesktop.DBus.ReloadConfig<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>:
+</pre></div>
+</div>
+<p><strong>Açıklama</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- Bu komut, D-Bus sistem servisine yeni yapılandırmaları yüklemesini söyler.
+- `--system` parametresi sistem bus’ını hedef alır.
+- Hata oluşursa komut sessizce geçer (`|| :`).
+</pre></div>
+</div>
+</section>
+<section id="adim-5-d-bus-servisini-baslatma-openrc">
+<h2><strong>Adım 5: D-Bus Servisini Başlatma (OpenRC)</strong><a class="headerlink" href="#adim-5-d-bus-servisini-baslatma-openrc" title="Permalink to this heading">¶</a></h2>
+<p>D-Bus için OpenRC init script’i <cite>/etc/init.d/dbus</cite> şu mantıkla çalışır:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/sbin/openrc-run</span>
+<span class="c1">#----------------------------------------------------------------------------------------------</span>
+<span class="nv">name</span><span class="o">=</span><span class="s2">&quot;System Message Bus&quot;</span>
+<span class="nv">description</span><span class="o">=</span><span class="s2">&quot;An IPC message bus daemon&quot;</span>
+
+<span class="nv">extra_started_commands</span><span class="o">=</span><span class="s2">&quot;reload&quot;</span>
+
+<span class="nv">supervisor</span><span class="o">=</span>supervise-daemon
+<span class="nv">command</span><span class="o">=</span><span class="s2">&quot;/usr/bin/dbus-daemon&quot;</span>
+<span class="nv">command_args</span><span class="o">=</span><span class="s2">&quot;--system --nofork --nopidfile --syslog-only </span><span class="si">${</span><span class="nv">command_args</span><span class="k">:-</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nv">command_background</span><span class="o">=</span><span class="s2">&quot;yes&quot;</span>
+<span class="nv">pidfile</span><span class="o">=</span><span class="s2">&quot;/run/</span><span class="nv">$RC_SVCNAME</span><span class="s2">.pid&quot;</span>
+
+depend<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>need<span class="w"> </span>localmount
+<span class="w">    </span>after<span class="w"> </span>bootmisc
+<span class="o">}</span>
+
+start_pre<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/run/dbus
+<span class="w">    </span>/usr/bin/dbus-uuidgen<span class="w"> </span>--ensure<span class="o">=</span>/etc/machine-id
+<span class="o">}</span>
+
+stop_post<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-S<span class="w"> </span>/run/dbus/system_bus_socket<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span>/run/dbus/system_bus_socket
+<span class="o">}</span>
+
+reload<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>ebegin<span class="w"> </span><span class="s2">&quot;Reloading </span><span class="nv">$name</span><span class="s2"> configuration&quot;</span>
+<span class="w">    </span>/usr/bin/dbus-send<span class="w"> </span>--print-reply<span class="w"> </span>--system<span class="w"> </span>--type<span class="o">=</span>method_call<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>--dest<span class="o">=</span>org.freedesktop.DBus<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>/<span class="w"> </span>org.freedesktop.DBus.ReloadConfig<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+<span class="w">    </span>eend<span class="w"> </span><span class="nv">$?</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p><strong>Açıklama</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- `supervise-daemon`: OpenRC’nin daemon’u denetlemesini sağlar.
+- `command` ve `command_args`: D-Bus daemonunu sistem bus modunda başlatır.
+- `start_pre()`: Servis başlamadan önce gerekli dizini oluşturur ve machine-id’yi doğrular.
+- `stop_post()`: Servis durduğunda socket dosyasını temizler.
+- `reload()`: Yapılandırma değişikliklerini uygulamak için D-Bus’a mesaj yollar.
+- `depend()`: Servisin başlatılması için gerekli bağımlılıklar (localmount, bootmisc) belirtilir.
+- `pidfile`: Servisin PID bilgisini tutar.
+</pre></div>
+</div>
+<p><strong>Servis Dosyasının Yaptıklar</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- D-Bus için sistem kullanıcı ve grup oluşturulur.
+- machine-id ve gerekli izinler ayarlanır.
+- OpenRC init script’i `/etc/init.d/dbus`, servisin başlatılmasını, durdurulmasını ve yeniden yüklenmesini yönetir.
+- `rc-service dbus start` ile sistemde mesajlaşma servisi aktif olur.
+</pre></div>
+</div>
+<p><strong>Kaynaklar</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">D</span><span class="o">-</span><span class="n">Bus</span> <span class="n">resmi</span> <span class="n">sitesi</span><span class="p">:</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">freedesktop</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">wiki</span><span class="o">/</span><span class="n">Software</span><span class="o">/</span><span class="n">dbus</span><span class="o">/</span>
+<span class="o">-</span> <span class="n">D</span><span class="o">-</span><span class="n">Bus</span> <span class="n">belgeleri</span><span class="p">:</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dbus</span><span class="o">.</span><span class="n">freedesktop</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">dbus</span><span class="o">/</span>
+<span class="o">-</span> <span class="n">OpenRC</span> <span class="n">belgeleri</span><span class="p">:</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">wiki</span><span class="o">.</span><span class="n">gentoo</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">wiki</span><span class="o">/</span><span class="n">OpenRC</span>
+<span class="o">-</span> <span class="n">dbus</span><span class="o">-</span><span class="n">daemon</span> <span class="n">ve</span> <span class="n">dbus</span><span class="o">-</span><span class="n">send</span> <span class="n">man</span> <span class="n">sayfaları</span><span class="p">:</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">manpages</span><span class="o">.</span><span class="n">debian</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">dbus</span><span class="o">-</span><span class="n">user</span><span class="o">-</span><span class="n">session</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+<h3>Gezinti</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/2-yazar.html"><strong>Yazar</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/2-yazar.html#paket-derleme"><strong>Paket Derleme</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/2-yazar.html#iletisim"><strong>İletişim</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/3-onsoz.html">Ön Söz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/4-icindekiler.html">İçindekiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01.giris/index.html"><strong>Temel Kavramlar</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02.sistemin-hazirlanmas%C4%B1/index.html"><strong>Temel Sistemin Hazırlanması</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08.kly-paket-sistemi-kullan%C4%B1m%C4%B1/index.html"><strong>kly Paket Sistemi Kullanımı</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09.paket-derleme/index.html"><strong>GNU Araçlarıyla xorg ve x11 Derleme</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10.iso-hazirlama/index.html"><strong>ISO Hazırlama</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12.sistemin-calistirma-inceleme/index.html">Oluşan Sistemin Çalıştırılması İncelenmesi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../14.xpencere-sistemi/index.html">X Pencere Sistemi</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Yardımcı Konular</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="019-apt.html"><strong>apt Paket Sistemi</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="100-virtualbox.html"><strong>VirtualBox</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="101-chroot.html"><strong>Chroot Nedir?</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="102-derleme-t%C3%BCrleri.html"><strong>Kaynak Kod Derleme</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="103-0.derleme-ara%C3%A7lar%C4%B1.html"><strong>Derleme Araçları</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="103-1.make.html"><strong>1-make</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="103-2.cmake.html"><strong>2-cmake</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="103-3.meson.html"><strong>3-meson</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="103-4.python.html"><strong>4-python</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="109-openrc.html"><strong>OpenRC</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="110-qemu.html"><strong>Qemu Kullanımı</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="139-github.html"><strong>github</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="139-github.html#sik-kullanilan-github-komutlari"><strong>Sık Kullanılan github Komutları</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="140-elogind.html"><strong>elogind Yapılandırması</strong></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><strong>D-Bus Yapılandırması</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#adim-1-kullanici-ve-grup-olusturma"><strong>Adım 1: Kullanıcı ve Grup Oluşturma</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adim-2-sistem-uuid-ve-machine-id-ayari"><strong>Adım 2: Sistem UUID ve machine-id Ayarı</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adim-3-dbus-daemon-launch-helper-izin-kontrolu"><strong>Adım 3: dbus-daemon-launch-helper İzin Kontrolü</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adim-4-d-bus-yapilandirma-yenileme"><strong>Adım 4: D-Bus Yapılandırma Yenileme</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adim-5-d-bus-servisini-baslatma-openrc"><strong>Adım 5: D-Bus Servisini Başlatma (OpenRC)</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../2-kaynak.html"><strong>Kaynaklar</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3-contact-sonkapak.html"><strong>Geliştiricilere Mesajımız</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4-lisans.html"><strong>Lisans Bilgileri</strong></a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;distro 2023.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/15.yardimci-konular/141-dbus.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

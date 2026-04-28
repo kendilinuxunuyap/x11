@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>X Pencere Sistemi &#8212; distro Wiki  belgelendirmesi</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="canonical" href="https://kendilinuxunuyap.github.io/01.giris/0-X.html" />
+    <link rel="index" title="Dizin" href="../genindex.html" />
+    <link rel="search" title="Ara" href="../search.html" />
+    <link rel="next" title="Temel Sistemin Hazırlanması" href="../02.sistemin-hazirlanmas%C4%B1/index.html" />
+    <link rel="prev" title="Temel Kavramlar" href="index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="x-pencere-sistemi">
+<h1>X Pencere Sistemi<a class="headerlink" href="#x-pencere-sistemi" title="Permalink to this heading">¶</a></h1>
+<p><strong>X Pencere Sistemi (X)</strong>, GNU/Linux ve Unix sistemlerde kullanılan grafik arayüz altyapısıdır.
+Bir uygulama değil, kurallar bütünüdür.</p>
+<p>Pencerelerin nasıl çizileceğini ve klavye/fare gibi donanımlarla nasıl iletişim kurulacağını tanımlar.
+X sunucusu (Xorg) ile X istemcileri (xcalc, xeyes vb.) arasındaki iletişimi sağlar.</p>
+<section id="x-pencere-sistemi-bilesenleri">
+<h2><strong>X Pencere Sistemi Bileşenleri</strong><a class="headerlink" href="#x-pencere-sistemi-bilesenleri" title="Permalink to this heading">¶</a></h2>
+<section id="x-sunucusu-xorg">
+<h3><strong>1- X Sunucusu (Xorg)</strong><a class="headerlink" href="#x-sunucusu-xorg" title="Permalink to this heading">¶</a></h3>
+<p>X Pencere Sistemi'nin en önemli bileşeni X sunucusudur (<strong>Xorg</strong>). X server, X sunucusu veya X11 server olarak da adlandırılır.</p>
+<p>Ekran, klavye ve fare ile uygulamalar arasında aracı görevi görür. Pencereleri oluşturur ve grafik çıktıyı sağlar.</p>
+<p>Xorg, bir <strong>görüntü sunucusudur (display server)</strong>. Masaüstü ortamlarını çalıştırır ancak kendisi bir masaüstü ortamı değildir.</p>
+</section>
+<section id="x-istemcileri-uygulamalar">
+<h3><strong>2- X İstemcileri (Uygulamalar)</strong><a class="headerlink" href="#x-istemcileri-uygulamalar" title="Permalink to this heading">¶</a></h3>
+<p>X sunucusuna bağlanan programlardır(xterm, xcalc, xeyes).</p>
+</section>
+<section id="pencere-yoneticisi-window-manager">
+<h3><strong>3- Pencere Yöneticisi (Window Manager)</strong><a class="headerlink" href="#pencere-yoneticisi-window-manager" title="Permalink to this heading">¶</a></h3>
+<p>Xorg yalnızca pencereyi oluşturur. Pencereyi taşıma, kapatma, büyütme ve küçültme işlemlerini yapar. Basit ortam sunan pencere yöneticileri( Openbox, i3).</p>
+<p>Xorg + Openbox =&gt; Grafik ortamda çalışan bir sistem oluşturur.</p>
+</section>
+<section id="giris-ekrani-yoneticisi-display-manager">
+<h3><strong>4- Giriş Ekranı Yöneticisi (Display Manager)</strong><a class="headerlink" href="#giris-ekrani-yoneticisi-display-manager" title="Permalink to this heading">¶</a></h3>
+<p>Giriş ekranı yöneticisi, sistem açıldığında kullanıcı seçimi ve parola ekranı sunar.
+Girişten sonra kullanıcı oturumunu (masaüstü yöneticisini) başlatır.</p>
+<p>Tercih edilen giriş ekranı yöneticileri: gdm, lightdm, lxdm.
+X Pencere Sistemi için zorunlu değildir.</p>
+</section>
+<section id="masaustu-yoneticisi-desktop-manager">
+<h3><strong>5- Masaüstü Yöneticisi (Desktop Manager)</strong><a class="headerlink" href="#masaustu-yoneticisi-desktop-manager" title="Permalink to this heading">¶</a></h3>
+<p>Masaüstü ortamını sağlayan uygulamalar bütünüdür. Dosya yöneticisi, pencere yöneticisi, ayarlar ve panel gibi bileşenleri içerir.</p>
+<p>Tercih edilen masaüstü yöneticisi(Cinnamon, LXDE, XFCE, KDE, GNOME). X Pencere Sistemi için zorunlu değildir.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p>Bu dokümanda, <strong>Xorg + Openbox</strong> ortamında xcalc, xeyes ve xterm çalıştırılabilen bir sistemin kurulumu anlatılacaktır.</p>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+<h3>Gezinti</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/2-yazar.html"><strong>Yazar</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/2-yazar.html#paket-derleme"><strong>Paket Derleme</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/2-yazar.html#iletisim"><strong>İletişim</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/3-onsoz.html">Ön Söz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00.kapak/4-icindekiler.html">İçindekiler</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html"><strong>Temel Kavramlar</strong></a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">X Pencere Sistemi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#x-pencere-sistemi-bilesenleri"><strong>X Pencere Sistemi Bileşenleri</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#x-sunucusu-xorg"><strong>1- X Sunucusu (Xorg)</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#x-istemcileri-uygulamalar"><strong>2- X İstemcileri (Uygulamalar)</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pencere-yoneticisi-window-manager"><strong>3- Pencere Yöneticisi (Window Manager)</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#giris-ekrani-yoneticisi-display-manager"><strong>4- Giriş Ekranı Yöneticisi (Display Manager)</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#masaustu-yoneticisi-desktop-manager"><strong>5- Masaüstü Yöneticisi (Desktop Manager)</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../02.sistemin-hazirlanmas%C4%B1/index.html"><strong>Temel Sistemin Hazırlanması</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08.kly-paket-sistemi-kullan%C4%B1m%C4%B1/index.html"><strong>kly Paket Sistemi Kullanımı</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09.paket-derleme/index.html"><strong>GNU Araçlarıyla xorg ve x11 Derleme</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10.iso-hazirlama/index.html"><strong>ISO Hazırlama</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12.sistemin-calistirma-inceleme/index.html">Oluşan Sistemin Çalıştırılması İncelenmesi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../14.xpencere-sistemi/index.html">X Pencere Sistemi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../15.yardimci-konular/index.html">Yardımcı Konular</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2-kaynak.html"><strong>Kaynaklar</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3-contact-sonkapak.html"><strong>Geliştiricilere Mesajımız</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4-lisans.html"><strong>Lisans Bilgileri</strong></a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;distro 2023.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/01.giris/0-X.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

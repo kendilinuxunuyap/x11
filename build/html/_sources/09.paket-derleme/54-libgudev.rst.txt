@@ -1,0 +1,52 @@
+.. _libgudev:
+
+**libgudev**
+============
+Donanım aygıtlarını yönetmek için kullanılan bir C kütüphanesidir.
+
+**Paketi Derleme :**
+--------------------
+
+Debian'da paketi derlemek için aşağıdaki paketlerin kurulu olması gerekir.
+
+.. code-block:: bash
+	
+	sudo apt install gobject-introspection libumockdev-dev valac libgirepository1.0-dev
+
+.. code-block:: bash
+
+    #!/usr/bin/env bash
+    name="libgudev"
+    version="238"
+    url="https://example.org"
+    description="GObject bindings for libudev"
+    source="https://gitlab.gnome.org/GNOME/libgudev/-/archive/$version/\
+    libgudev-$version.tar.gz"
+    depends="glib,eudev"
+    builddepend=""
+    group="dev.libs"
+
+    setup(){
+    cd $SOURCEDIR
+        meson setup $BUILDDIR --prefix=/usr \
+            --libdir=/usr/lib64/ \
+            -Dintrospection=enabled \
+    		-Dvapi=enabled \
+    		-Dgtk_doc=false
+    }
+
+    build(){
+        meson compile -C $BUILDDIR
+    }
+
+    package(){
+        DESTDIR="$DESTDIR" meson install -C $BUILDDIR
+    }
+
+
+**Not:** Burada verilen derleme talimatı(script) **kly Paket Sistemi**'ni kullanarak paketi derler ve oluştur. Oluşan paket(**.kly uzantılı dosya**)  **kly Paket Sistemi** kullanılarak siteme yüklenebilir. **kly Paket Sistemiyle Paket Yapma** konusunu okumak için `tıklayınız. <#klypaketyap>`_
+
+
+.. raw:: pdf
+
+   PageBreak

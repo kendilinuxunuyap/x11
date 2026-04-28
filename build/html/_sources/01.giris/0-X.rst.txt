@@ -1,0 +1,61 @@
+X Pencere Sistemi
+=================
+
+**X Pencere Sistemi (X)**, GNU/Linux ve Unix sistemlerde kullanılan grafik arayüz altyapısıdır.  
+Bir uygulama değil, kurallar bütünüdür.  
+
+Pencerelerin nasıl çizileceğini ve klavye/fare gibi donanımlarla nasıl iletişim kurulacağını tanımlar.  
+X sunucusu (Xorg) ile X istemcileri (xcalc, xeyes vb.) arasındaki iletişimi sağlar.
+
+**X Pencere Sistemi Bileşenleri**
++++++++++++++++++++++++++++++++++
+
+**1- X Sunucusu (Xorg)**
+------------------------
+
+X Pencere Sistemi'nin en önemli bileşeni X sunucusudur (**Xorg**). X server, X sunucusu veya X11 server olarak da adlandırılır.  
+
+Ekran, klavye ve fare ile uygulamalar arasında aracı görevi görür. Pencereleri oluşturur ve grafik çıktıyı sağlar.  
+
+Xorg, bir **görüntü sunucusudur (display server)**. Masaüstü ortamlarını çalıştırır ancak kendisi bir masaüstü ortamı değildir.  
+
+**2- X İstemcileri (Uygulamalar)**
+----------------------------------
+
+X sunucusuna bağlanan programlardır(xterm, xcalc, xeyes).
+
+**3- Pencere Yöneticisi (Window Manager)**
+------------------------------------------
+
+Xorg yalnızca pencereyi oluşturur. Pencereyi taşıma, kapatma, büyütme ve küçültme işlemlerini yapar. Basit ortam sunan pencere yöneticileri( Openbox, i3).
+
+Xorg + Openbox => Grafik ortamda çalışan bir sistem oluşturur.
+
+
+**4- Giriş Ekranı Yöneticisi (Display Manager)**
+------------------------------------------------
+
+Giriş ekranı yöneticisi, sistem açıldığında kullanıcı seçimi ve parola ekranı sunar.  
+Girişten sonra kullanıcı oturumunu (masaüstü yöneticisini) başlatır.  
+
+Tercih edilen giriş ekranı yöneticileri: gdm, lightdm, lxdm.  
+X Pencere Sistemi için zorunlu değildir.
+
+
+**5- Masaüstü Yöneticisi (Desktop Manager)**
+--------------------------------------------
+
+Masaüstü ortamını sağlayan uygulamalar bütünüdür. Dosya yöneticisi, pencere yöneticisi, ayarlar ve panel gibi bileşenleri içerir.  
+
+Tercih edilen masaüstü yöneticisi(Cinnamon, LXDE, XFCE, KDE, GNOME). X Pencere Sistemi için zorunlu değildir.
+
+|
+|
+
+
+Bu dokümanda, **Xorg + Openbox** ortamında xcalc, xeyes ve xterm çalıştırılabilen bir sistemin kurulumu anlatılacaktır.
+
+
+.. raw:: pdf
+
+   PageBreak

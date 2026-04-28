@@ -43,7 +43,7 @@ html_theme_options = {
     'footnote_bg': 'none',
     'page_width': '100%',
     'body_max_width': 'auto',
-    'logo': 'logo.svg',
+    'logo': 'logo.png',
 
 }
 html_css_files = [
