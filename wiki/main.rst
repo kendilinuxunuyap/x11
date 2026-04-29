@@ -9,7 +9,7 @@ Bu kitap, açık kaynak ve özgür yazılıma gönül vermiş kişilerin, Türk�
 
 Kaynak ve dokümanlarımız yansılarımız:
 
-. **X Pencere Sistemi  web** için `tıklayınız. https://kendilinuxunuyap.github.io/x11/ >`_
-. **X Pencere Sistemi  pdf kitap** için `tıklayınız. <https://kendilinuxunuyap.github.io/x11/kitap/>`_
-. **X Pencere Sistemi İso** için `tıklayınız. https://github.com/kendilinuxunuyap/kly-x11-distro/releases/download/current/kly-x11-distro.iso >`_
+#. **X Pencere Sistemi web**: `Siteye git <https://kendilinuxunuyap.github.io/x11/>`_
+#. **PDF kitap**: `Kitabı aç <https://kendilinuxunuyap.github.io/x11/kitap/>`_
+#. **ISO indir**: `ISO dosyasını indir <https://github.com/kendilinuxunuyap/kly-x11-distro/releases/download/current/kly-x11-distro.iso>`_
 
